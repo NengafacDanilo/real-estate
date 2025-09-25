@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Agent</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#1193d4",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            "display": ["Work Sans"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .form-input::placeholder {
+        color: #9ca3af;}
+    .dark .form-input::placeholder {
+        color: #6b7280;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex items-center justify-center min-h-screen p-4">
+<div class="w-full max-w-lg mx-auto bg-white dark:bg-background-dark/50 rounded-xl shadow-lg p-8 space-y-6">
+<div class="text-center">
+<h1 class="text-3xl font-bold text-gray-900 dark:text-white">Contact Agent</h1>
+<p class="mt-2 text-gray-600 dark:text-gray-300">Let's connect you with the right person.</p>
+</div>
+<form action="#" class="space-y-6" method="POST">
+<div>
+<label class="text-sm font-medium text-gray-700 dark:text-gray-200" for="name">Name</label>
+<input class="form-input mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-800/50 focus:border-primary focus:ring-primary text-gray-900 dark:text-white px-4 py-3" id="name" name="name" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="text-sm font-medium text-gray-700 dark:text-gray-200" for="email">Email</label>
+<input class="form-input mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-800/50 focus:border-primary focus:ring-primary text-gray-900 dark:text-white px-4 py-3" id="email" name="email" placeholder="you@example.com" type="email"/>
+</div>
+<div>
+<label class="text-sm font-medium text-gray-700 dark:text-gray-200" for="phone">Phone Number</label>
+<input class="form-input mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-800/50 focus:border-primary focus:ring-primary text-gray-900 dark:text-white px-4 py-3" id="phone" name="phone" placeholder="+1 (555) 123-4567" type="tel"/>
+</div>
+<div>
+<label class="text-sm font-medium text-gray-700 dark:text-gray-200" for="message">Message</label>
+<textarea class="form-input mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-800/50 focus:border-primary focus:ring-primary text-gray-900 dark:text-white px-4 py-3 resize-none" id="message" name="message" placeholder="I'm interested in this property and would like to schedule a viewing." rows="4"></textarea>
+</div>
+<div>
+<button class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" type="submit">
+            Send Message
+          </button>
+</div>
+</form>
+</div>
+</div>
+
+</body></html>

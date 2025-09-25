@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design - Settings</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1193d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="flex flex-col min-h-screen">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-background-dark/10 dark:border-background-light/10 px-10 py-4">
+<div class="flex items-center gap-4 text-background-dark dark:text-background-light">
+<div class="h-8 w-8 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold">HomeFinder</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8 text-background-dark/80 dark:text-background-light/80 font-medium">
+<a class="hover:text-primary transition-colors" href="/Frontend/buy/code.html">Buy</a>
+<a class="hover:text-primary transition-colors" href="/Frontend/property_for_sale/code.html">Rent</a>
+<a class="hover:text-primary transition-colors" href="#">Sell</a>
+<a class="hover:text-primary transition-colors" href="#">Find Agent</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-background-light dark:bg-background-dark/50 text-background-dark/60 dark:text-background-light/60 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-background-light dark:bg-background-dark/50 text-background-dark/60 dark:text-background-light/60 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="ml-2 h-10 w-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2NmhGiTH_cJaTYydXGUty_pqTLeApS4iKxOCmls4-vtPQYtqFznK8zlVdEbakCVHnRQ_-TQ2Nrn97jSLsXpuuxtAUGpRJa5FXvFAbmL6JS2dlaUnXOz8DGMq8A6xHbIIOFTiQo885AWvO0hLAPiQPui8S5_cYzmfDtUDC0m_r39FCi3kLvumawd1D76SxwxGhg-nj3JPTZrIgc6HKbzOPmuvHGRAsInl5iQMJILiSU-p5NdpGVWUTHLmfWN_mrUP8W7kz0GVygw");'></div>
+</div>
+</header>
+<main class="flex flex-1 container mx-auto py-10 px-4 sm:px-6 lg:px-8">
+<div class="flex w-full gap-12">
+<aside class="w-64 flex-shrink-0">
+<div class="flex flex-col gap-1 text-background-dark/80 dark:text-background-light/80">
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors" href="/Frontend/profile_dashboard/code.html">
+<span class="material-symbols-outlined">person</span>
+<span class="font-medium">Profile</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 bg-primary/10 dark:bg-primary/20 text-primary font-bold" href="/Frontend/security_settings/code.html">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-medium">Settings</span>
+</a>
+<div class="ml-9 mt-1 flex flex-col gap-1 border-l border-background-dark/10 dark:border-background-light/10 pl-3">
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors" href="/Frontend/notifications_settings/code.html">
+                           Notifications
+                        </a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors" href="/Frontend/privacy_settings/code.html">
+                            Privacy
+                        </a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 bg-primary/10 dark:bg-primary/20 text-primary font-bold" href="/Frontend/security_settings/code.html">
+                            Security
+                        </a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors" href="/Frontend/billing_settings/code.html">
+                           Billing
+                        </a>
+</div>
+</div>
+</aside>
+<section class="flex-1">
+<h1 class="text-3xl font-bold text-background-dark dark:text-background-light mb-8">Security Settings</h1>
+<div class="space-y-10">
+<div>
+<h2 class="text-xl font-bold text-background-dark dark:text-background-light mb-4">Password</h2>
+<div class="bg-white dark:bg-background-dark/50 rounded-lg p-6 flex items-center justify-between">
+<div>
+<h3 class="text-base font-medium text-background-dark dark:text-background-light">Change password</h3>
+<p class="text-sm text-background-dark/60 dark:text-background-light/60 mt-1">Last changed 3 months ago</p>
+</div>
+<button class="px-4 py-2 text-sm font-medium rounded-lg bg-background-light dark:bg-background-dark/80 text-background-dark dark:text-background-light hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors">Update</button>
+</div>
+</div>
+<div>
+<h2 class="text-xl font-bold text-background-dark dark:text-background-light mb-4">Two-Factor Authentication</h2>
+<div class="bg-white dark:bg-background-dark/50 rounded-lg p-6 flex items-center justify-between">
+<div>
+<h3 class="text-base font-medium text-background-dark dark:text-background-light">Enable 2FA</h3>
+<p class="text-sm text-background-dark/60 dark:text-background-light/60 mt-1">Protect your account with an extra layer of security.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-background-light dark:bg-background-dark/80 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-background-dark/20 after:dark:border-background-light/20 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<div>
+<h2 class="text-xl font-bold text-background-dark dark:text-background-light mb-4">Login Activity</h2>
+<div class="bg-white dark:bg-background-dark/50 rounded-lg p-6 space-y-6">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="text-base font-medium text-background-dark dark:text-background-light">Current session</h3>
+<p class="text-sm text-background-dark/60 dark:text-background-light/60 mt-1">Chrome on Windows - California, United States</p>
+</div>
+<span class="text-sm text-background-dark/60 dark:text-background-light/60">Now</span>
+</div>
+<div class="border-t border-background-dark/10 dark:border-background-light/10"></div>
+<div class="flex items-start justify-between">
+<div>
+<h3 class="text-base font-medium text-background-dark dark:text-background-light">Last login</h3>
+<p class="text-sm text-background-dark/60 dark:text-background-light/60 mt-1">Chrome on Windows - California, United States</p>
+</div>
+<span class="text-sm text-background-dark/60 dark:text-background-light/60">2 days ago</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+
+</body></html>

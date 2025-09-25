@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Agent Profile Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0684f9",
+              "background-light": "#f5f7f8",
+              "background-dark": "#0f1923",
+            },
+            fontFamily: {
+              display: ["Work Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0f1923] dark:text-background-light">
+<div class="flex min-h-screen flex-col">
+<header class="sticky top-0 z-20 border-b border-background-light/10 bg-background-light/80 dark:border-background-dark/10 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2" href="#">
+<svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+</svg>
+<span class="text-xl font-bold">Find Homes</span>
+</a>
+<nav class="hidden md:flex md:gap-8">
+<a class="text-sm font-semibold hover:text-primary" href="#">Buy</a>
+<a class="text-sm font-semibold hover:text-primary" href="#">Rent</a>
+<a class="text-sm font-semibold hover:text-primary" href="#">Sell</a>
+<a class="text-sm font-semibold hover:text-primary" href="#">Mortgage</a>
+<a class="text-sm font-semibold hover:text-primary" href="#">Find an Agent</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex">
+<div class="relative">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<svg class="text-primary/60" fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+</div>
+<input class="w-full rounded-lg border-none bg-primary/10 py-2 pl-10 pr-4 text-sm focus:bg-primary/20 focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search" type="text"/>
+</div>
+</div>
+<button class="rounded-full p-2 hover:bg-primary/10 dark:hover:bg-primary/20">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,220.66,240,164,240,94A62.07,62.07,0,0,0,178,32ZM128,206.8C109.74,196.16,32,147.69,32,94A46.06,46.06,0,0,1,78,48c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,147.61,146.24,196.15,128,206.8Z"></path>
+</svg>
+</button>
+<button class="rounded-full p-2 hover:bg-primary/10 dark:hover:bg-primary/20">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path>
+</svg>
+</button>
+<button class="h-10 w-10">
+<div class="h-full w-full rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBfv514fwGe0FKiTZCJ4Ta23U_eY6GV9Mth00qIxqzmbNdBPJfCfllysGv8t2LyKCm2V4kVv4rHgDazYxdfdKEkCOuAn7a2fAtYm5uYizu-22CrN2oh7kfaLpq0e9BPiNgdPRFEfKieTgP64LM3JwT4POdsuZN29rus4N1rJ1i2uzjKClEMG4Bx-bcNzt-2Yp8yA0f7EDwsXw7vh5OJ4oPs2JVVh0yIrYmihTKllSdkPjF1a0mguBdnnQbLSLq3i2HSqMOMRsn6Zg");'></div>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+<div class="flex flex-col gap-8 md:gap-12">
+<div class="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
+<div class="h-32 w-32 flex-shrink-0 rounded-full bg-cover bg-center sm:h-40 sm:w-40" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBfUSo-IoA6-Ii_eDvgjtr86eqaJ9wurkXzF0GP3l107nhvt9AbNzvygXSK89Das7qfhMoF7Hkf_F6pkX0oxe1-exIfgJD8HuYo7AKLRxXqBkE9niV8Mxwf2O8b0VVvMNwZSjRFmZSsUFWt1L4O2YWtXeBxR8WpMC9tND8bNFKq-qPuhA8dudlE2R8GxdS5xwY4AXl89HoUR0X4R1Z6m-mGYfeW8nydpX0tnuj-7QhCiWBSXRRf06ewDV1siQsR7fPpOehge0cl3A");'></div>
+<div class="flex flex-1 flex-col items-center gap-2 text-center sm:items-start sm:text-left">
+<h1 class="text-3xl font-bold sm:text-4xl">Sarah Miller</h1>
+<p class="text-primary dark:text-primary/90">
+                  Real Estate Agent at Premier Realty
+                </p>
+<p class="text-sm text-black/60 dark:text-background-light/60">
+                  5 years experience | 120+ homes sold
+                </p>
+<button class="mt-4 rounded-lg bg-primary px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary/80">
+                  Contact Agent
+                </button>
+</div>
+</div>
+<div class="border-b border-black/10 dark:border-white/10">
+<nav aria-label="Tabs" class="-mb-px flex space-x-8">
+<a class="border-primary text-primary whitespace-nowrap border-b-2 px-1 py-4 text-sm font-medium" href="#">
+                  About
+                </a>
+<a class="border-transparent text-black/60 hover:border-black/30 hover:text-black/80 dark:text-background-light/60 dark:hover:border-background-light/30 dark:hover:text-background-light/80 whitespace-nowrap border-b-2 px-1 py-4 text-sm font-medium" href="#">
+                  Listings
+                </a>
+<a class="border-transparent text-black/60 hover:border-black/30 hover:text-black/80 dark:text-background-light/60 dark:hover:border-background-light/30 dark:hover:text-background-light/80 whitespace-nowrap border-b-2 px-1 py-4 text-sm font-medium" href="#">
+                  Reviews
+                </a>
+</nav>
+</div>
+<div class="space-y-10">
+<section>
+<h2 class="mb-4 text-2xl font-bold">About Sarah</h2>
+<p class="leading-relaxed text-black/80 dark:text-background-light/80">
+                  Sarah Miller is a dedicated and experienced real estate agent
+                  at Premier Realty, specializing in residential properties in
+                  the greater metropolitan area. With over five years in the
+                  industry, Sarah has successfully helped over 120 clients buy
+                  and sell their homes, earning a reputation for her
+                  exceptional service, market expertise, and commitment to
+                  client satisfaction. She is known for her personalized
+                  approach, attention to detail, and ability to navigate
+                  complex transactions with ease. Sarah's goal is to make the
+                  real estate process as smooth and stress-free as possible for
+                  her clients, ensuring they achieve their goals.
+                </p>
+</section>
+<section>
+<h2 class="mb-4 text-2xl font-bold">Contact Information</h2>
+<div class="divide-y divide-black/10 dark:divide-white/10">
+<div class="grid grid-cols-3 gap-4 py-4">
+<dt class="font-medium text-black/60 dark:text-background-light/60">Phone</dt>
+<dd class="col-span-2">(555) 123-4567</dd>
+</div>
+<div class="grid grid-cols-3 gap-4 py-4">
+<dt class="font-medium text-black/60 dark:text-background-light/60">Email</dt>
+<dd class="col-span-2">sarah.miller@email.com</dd>
+</div>
+<div class="grid grid-cols-3 gap-4 py-4">
+<dt class="font-medium text-black/60 dark:text-background-light/60">
+                      Social Media
+                    </dt>
+<dd class="col-span-2">LinkedIn, Twitter</dd>
+</div>
+</div>
+</section>
+<section>
+<h2 class="mb-4 text-2xl font-bold">Active Listings</h2>
+<div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+<div class="group relative">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDk4GmB8EjkSQABGFq1FDuAskJoGVCw-HqOhBvgjb-0L8BR1osoX6bNcQRLE2cX9Bjf0HMTgZDRpac7wI01zqMztYZVxLIZoOEuB0Sc6Dv3En83Wd0aKrNd9gqHQg34KgKKyF10j5J-dN51m55PCUIYsdESLekP10Jl633qZRohYVyEURBpCvpJxLjbdV07bzQaZEKIZAEWUHFy5Kw0hfQbWVZdNqLqMnr3WlZ5BmsOLKTzscjBww4al5beqaepzDU0DyXXDOtSFA");'></div>
+</div>
+<div class="mt-4">
+<h3 class="text-base font-semibold">
+                        Charming 3-Bedroom Home
+                      </h3>
+<p class="mt-1 text-sm text-black/60 dark:text-background-light/60">
+                        $450,000 | 3 beds, 2 baths, 1800 sq ft
+                      </p>
+</div>
+</div>
+<div class="group relative">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3Qe8WUzyQ6NyzhgeqBJAAdtPWZsZN1bz8TSxEGJ9hTXropSTJ-GUzC8FZcNie01uGIjWS6ZQEsFoo8_8ewxO72nxh7S_J2gygbt2BTwycEKU1ckQorQvhG3yOPoxhGCY9qLWq8AdC9FFNjgKQE4soCjC5yRxaCAGtihf7S25jhkpC0JCjPQKOX7wJreKAtyPYCYckUPTRafL8duPiW4574m5B3hfAcb567ig8TOl0_qetJ0QBlWGQbFSn3eUk5Lq6Iu4m7EQiWA");'></div>
+</div>
+<div class="mt-4">
+<h3 class="text-base font-semibold">
+                        Spacious 4-Bedroom Family House
+                      </h3>
+<p class="mt-1 text-sm text-black/60 dark:text-background-light/60">
+                        $675,000 | 4 beds, 3 baths, 2500 sq ft
+                      </p>
+</div>
+</div>
+<div class="group relative">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXoRQmSBwLcvEWaIihnSm7MPRJXFF4LAadj7dM6jRiTgor-zrGjr4MywFw_CqJVLjrI84KDnjiffoUIHIsJ8g1q4DjuNAsFm6at1m4ITneQzqzwK4FGw9ld32dUyvGX8APtFxgG1mtd0D_1VmIMCXGfzymvZGF01r5O6WoXMZzoSkfEgm3tw1nn135GJFN5nTMBNRoXBR2xxf34YZMAN8b5Ef4Dzhx6o3ZDm55egbrI4Fci7jo531areJfQzIIzbyMnUPDK9_8DA");'></div>
+</div>
+<div class="mt-4">
+<h3 class="text-base font-semibold">
+                        Modern 2-Bedroom Apartment
+                      </h3>
+<p class="mt-1 text-sm text-black/60 dark:text-background-light/60">
+                        $325,000 | 2 beds, 2 baths, 1200 sq ft
+                      </p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="mb-4 text-2xl font-bold">Client Reviews</h2>
+<div class="space-y-8">
+<div class="rounded-xl bg-background-light p-6 shadow-sm dark:bg-background-dark/50">
+<div class="flex items-start gap-4">
+<div class="h-12 w-12 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBUExnmH-gNb2tUr25V_rocPcnU4zA9caa3fix2BnBukx9dnoiKTYxk3LarXMMYi2K9Cue46-dQUgcmufW1zYZEgWBJsQ7gJXSJAjctduBbAUK3CTLU8MaUmioP04DnHBSReCsshpJj8vHpL6HHNzjmtmLBVXs4FV8ZVHV1di5Q94vCP-lj-zBPRR2TCCzFMjGyW-dNuhJ0s6ZER5jetjcdIfnq0iM-UP38fxAq3Tw9MOYbowMiPXDGB1e3ifKQzEaihfGyWKd9-Q");'></div>
+<div class="flex-1">
+<div class="flex items-baseline justify-between">
+<p class="font-semibold">Emily Carter</p>
+<p class="text-xs text-black/50 dark:text-background-light/50">
+                            2 months ago
+                          </p>
+</div>
+<div class="mt-1 flex items-center">
+<svg class="text-yellow-400" fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
+</svg>
+<svg class="text-yellow-400" fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
+</svg>
+<svg class="text-yellow-400" fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
+</svg>
+<svg class="text-yellow-400" fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
+</svg>
+<svg class="text-yellow-400" fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
+</svg>
+</div>
+</div>
+</div>
+<p class="mt-4 text-sm leading-relaxed text-black/80 dark:text-background-light/80">
+                      Sarah was an absolute pleasure to work with! She helped us
+                      find our dream home in record time and made the entire
+                      process seamless. Her knowledge of the market and
+                      attention to detail were invaluable.
+                    </p>
+</div>
+<div class="rounded-xl bg-background-light p-6 shadow-sm dark:bg-background-dark/50">
+<div class="flex items-start gap-4">
+<div class="h-12 w-12 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBWLJb2k5xnhfyW1BtOJ53_ZQzqoLHzeeNMKUoC_DMHzNzxf3Ect51nOkoNiqhKl6LUxMgFEFRauCdIJAWXa61MFyL1vuncnSRmv13S24ubBFdUpepAFxNX_BPfJzy9xXeiwzFq42TvI27PVRwU-EnprwtSyK__d8ZxpgVMqfaU5dwRzhRl2vo2AG7A7oKqfp0naeSGbKSTCsgTl3MwMep3AGWal34eFp-cjeuzmCBUeObHdyCrwmz1IT4R8Cv5TdnhLllpHkZmAQ");'></div>
+<div class="flex-1">
+<div class="flex items-baseline justify-between">
+<p class="font-semibold">David Lee</p>
+<p class="text-xs text-black/50 dark:text-background-light/50">
+                            4 months ago
+                          </p>
+</div>
+<div class="mt-1 flex items-center">
+<svg class="text-yellow-400" fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
+</svg>
+<svg class="text-yellow-400" fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
+</svg>
+<svg class="text-yellow-400" fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
+</svg>
+<svg class="text-yellow-400" fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
+</svg>
+<svg class="text-yellow-400" fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
+</svg>
+</div>
+</div>
+</div>
+<p class="mt-4 text-sm leading-relaxed text-black/80 dark:text-background-light/80">
+                      Sarah went above and beyond to sell our house. Her
+                      marketing strategies were top-notch, and she kept us
+                      informed every step of the way. We couldn't have asked
+                      for a better agent.
+                    </p>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

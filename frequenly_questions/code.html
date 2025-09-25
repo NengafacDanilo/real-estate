@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>HomeFinder - FAQ</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0684f9",
+            "background-light": "#f5f7f8",
+            "background-dark": "#0f1923",
+          },
+          fontFamily: {
+            "display": ["Work Sans"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .group-open\:rotate-180[open] > summary svg {
+      transform: rotate(180deg);
+    }
+    .group-open\:text-primary[open] > summary {
+      color: #0684f9;
+    }
+    details > summary {
+      list-style: none;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="flex flex-col min-h-screen">
+<header class="bg-background-light dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-4">
+<a class="flex items-center gap-2 text-slate-900 dark:text-white" href="#">
+<svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h1 class="text-xl font-bold">HomeFinder</h1>
+</a>
+</div>
+<nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="/Frontend/buy/code.html">Buy</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="/Frontend/property_for_sale/code.html">Rent</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Mortgage</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="/Frontend/about_us_page/code.html">About Us</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Find Pros</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex items-center justify-center h-10 w-10 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-primary/20 dark:hover:bg-primary/30 hover:text-primary transition-colors">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,220.66,240,164,240,94A62.07,62.07,0,0,0,178,32ZM128,206.8C109.74,196.16,32,147.69,32,94A46.06,46.06,0,0,1,78,48c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,147.61,146.24,196.15,128,206.8Z"></path>
+</svg>
+</button>
+<button class="hidden sm:flex items-center justify-center h-10 w-10 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-primary/20 dark:hover:bg-primary/30 hover:text-primary transition-colors">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32Zm0,16V152h-28.7A15.86,15.86,0,0,0,168,156.69L148.69,176H107.31L88,156.69A15.86,15.86,0,0,0,76.69,152H48V48Zm0,160H48V168H76.69L96,187.31A15.86,15.86,0,0,0,107.31,192h41.38A15.86,15.86,0,0,0,160,187.31L179.31,168H208v40Z"></path>
+</svg>
+</button>
+<div class="w-10 h-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCa9fDrwzcnuLWwHf5ezFHBj0rYLkEEGB27J1mtPRVakgCz4lY4peXDlbEtgn2EBuqoie-KkUqE1J3OuIpMt-biF1pCLei4j3r3j-D9Y0-L8cw3OXEXSe7LNIyKPHGwGUmWm6TI1ScIy_app-Pkb_R6zhqvoLsRZNCR1K-zJItK2-NFyglhaPPWg_vj-r-YqPYLInRleDoQtu7FYIj47cez5BgfDB7V8Wrtdvg1olDTWeZMuNIOcB55yn9Rihn9DxeyyWfgbYRypg");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">Frequently Asked Questions</h2>
+<p class="mt-4 text-lg text-slate-600 dark:text-slate-400">Find answers to the most common questions about buying, renting, and selling.</p>
+</div>
+<div class="mb-12">
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<svg class="h-5 w-5 text-slate-400 dark:text-slate-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<input class="form-input w-full h-12 pl-12 pr-4 rounded-lg bg-background-light dark:bg-background-dark border border-slate-300 dark:border-slate-700 focus:ring-primary focus:border-primary text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500" placeholder="Search FAQs" type="search"/>
+</div>
+</div>
+<div class="space-y-4">
+<details class="group bg-background-light dark:bg-slate-900/50 rounded-lg border border-slate-200 dark:border-slate-800 group-open:text-primary" open="">
+<summary class="flex items-center justify-between p-4 cursor-pointer font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60 rounded-t-lg transition-colors">
+              How do I search for properties?
+              <svg class="w-5 h-5 text-slate-500 dark:text-slate-400 transform transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</summary>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400">
+<p>To search for properties, use the search bar on the homepage. Enter your desired location, property type, and any other relevant criteria. You can also use the advanced search options for more specific filters.</p>
+</div>
+</details>
+<details class="group bg-background-light dark:bg-slate-900/50 rounded-lg border border-slate-200 dark:border-slate-800 group-open:text-primary">
+<summary class="flex items-center justify-between p-4 cursor-pointer font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60 rounded-lg transition-colors">
+              What are the different property types available?
+              <svg class="w-5 h-5 text-slate-500 dark:text-slate-400 transform transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</summary>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400">
+<p>We list a wide range of properties including single-family homes, apartments, condos, townhouses, and land. You can filter by property type in your search to narrow down the results to what you're looking for.</p>
+</div>
+</details>
+<details class="group bg-background-light dark:bg-slate-900/50 rounded-lg border border-slate-200 dark:border-slate-800 group-open:text-primary">
+<summary class="flex items-center justify-between p-4 cursor-pointer font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60 rounded-lg transition-colors">
+              How can I schedule a viewing?
+              <svg class="w-5 h-5 text-slate-500 dark:text-slate-400 transform transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</summary>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400">
+<p>Once you find a property you're interested in, you can request a viewing directly from the property details page. Click the "Schedule a Tour" button and select a date and time that works for you. The listing agent will then confirm the appointment.</p>
+</div>
+</details>
+<details class="group bg-background-light dark:bg-slate-900/50 rounded-lg border border-slate-200 dark:border-slate-800 group-open:text-primary">
+<summary class="flex items-center justify-between p-4 cursor-pointer font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60 rounded-lg transition-colors">
+              What is the process for making an offer?
+              <svg class="w-5 h-5 text-slate-500 dark:text-slate-400 transform transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</summary>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400">
+<p>Making an offer typically involves working with a real estate agent who will prepare a formal offer document. This document includes the price you're willing to pay, as well as any contingencies. Contact one of our affiliated agents to get started.</p>
+</div>
+</details>
+<details class="group bg-background-light dark:bg-slate-900/50 rounded-lg border border-slate-200 dark:border-slate-800 group-open:text-primary">
+<summary class="flex items-center justify-between p-4 cursor-pointer font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60 rounded-lg transition-colors">
+              How do I contact a real estate agent?
+              <svg class="w-5 h-5 text-slate-500 dark:text-slate-400 transform transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</summary>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400">
+<p>You can find agent contact information on each property listing. Additionally, our "Find Pros" section allows you to search for agents in your area based on their specialty and client reviews.</p>
+</div>
+</details>
+</div>
+</div>
+</main>
+<footer class="bg-background-light dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex flex-col items-center md:items-start">
+<a class="flex items-center gap-2 text-slate-900 dark:text-white" href="#">
+<svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h1 class="text-xl font-bold">HomeFinder</h1>
+</a>
+<p class="mt-4 text-slate-600 dark:text-slate-400 text-center md:text-left text-sm">Your journey to a new home starts here.</p>
+</div>
+<div class="col-span-2">
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+<div>
+<h3 class="font-semibold text-slate-900 dark:text-white">Company</h3>
+<ul class="mt-4 space-y-2 text-sm">
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary" href="#">About</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary" href="#">Careers</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary" href="#">Press</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-slate-900 dark:text-white">Support</h3>
+<ul class="mt-4 space-y-2 text-sm">
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary" href="#">Contact Us</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary" href="#">Help Center</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-slate-900 dark:text-white">Legal</h3>
+<ul class="mt-4 space-y-2 text-sm">
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary" href="#">Terms of Service</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary" href="#">Accessibility</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-slate-900 dark:text-white">Follow Us</h3>
+<div class="flex mt-4 space-x-4">
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12c0-5.523-4.477-10-10-10z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.793 2.013 10.147 2 12.315 2zm-1.002 1.725c-2.786 0-3.054.012-4.122.06-1.01.048-1.62.21-2.12.41a3.18 3.18 0 00-1.15.745c-.4.4-.636.75-.745 1.15-.198.5-.36 1.11-.41 2.12-.048 1.068-.06 1.336-.06 4.122s.012 3.054.06 4.122c.05 1.01.212 1.62.41 2.12a3.18 3.18 0 00.745 1.15c.4.4.75.636 1.15.745.5.198 1.11.36 2.12.41 1.068.048 1.336.06 4.122.06 2.786 0 3.054-.012 4.122-.06 1.01-.048 1.62-.21 2.12-.41a3.18 3.18 0 001.15-.745c.4-.4.636-.75.745-1.15.198-.5.36-1.11.41-2.12.048-1.068.06-1.336.06-4.122s-.012-3.054-.06-4.122c-.05-1.01-.212-1.62-.41-2.12a3.18 3.18 0 00-.745-1.15c-.4-.4-.75-.636-1.15-.745-.5-.198-1.11-.36-2.12-.41-1.068-.048-1.336-.06-4.122-.06zM12 6.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.58a3.445 3.445 0 110-6.89 3.445 3.445 0 010 6.89zm6.315-9.39a1.232 1.232 0 100 2.464 1.232 1.232 0 000-2.464z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 border-t border-slate-200 dark:border-slate-800 pt-8 text-center text-sm text-slate-500 dark:text-slate-400">
+<p>© 2024 HomeFinder. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

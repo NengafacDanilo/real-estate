@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Manage Listings</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0684f9",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1923",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-black dark:text-white">
+<div class="flex flex-col min-h-screen">
+<header class="bg-background-light dark:bg-background-dark border-b border-black/10 dark:border-white/10">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-4">
+<svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h1 class="text-xl font-bold">HomeFinder</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Buy</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Rent</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Sell</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Mortgage</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Find Agent</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden md:block px-4 py-2 text-sm font-bold rounded-lg bg-primary/20 dark:bg-primary/30 text-primary hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">Sign in</button>
+<button class="md:hidden flex items-center justify-center size-10 rounded-full bg-background-light dark:bg-background-dark hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+<h2 class="text-3xl font-bold">Manage Listings</h2>
+<button class="flex items-center gap-2 px-4 py-2 text-sm font-bold rounded-lg bg-primary text-white hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">add</span>
+<span>Add New Listing</span>
+</button>
+</div>
+<div class="mb-6">
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-black/50 dark:text-white/50">search</span>
+</div>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg bg-black/5 dark:bg-white/5 border-transparent focus:ring-primary focus:border-primary" placeholder="Search by address, city, or listing ID" type="text"/>
+</div>
+</div>
+<div class="border-b border-black/10 dark:border-white/10 mb-6">
+<nav class="flex gap-4">
+<a class="py-2 px-1 text-sm font-bold border-b-2 border-primary text-primary" href="#">All Listings</a>
+<a class="py-2 px-1 text-sm font-medium border-b-2 border-transparent text-black/60 dark:text-white/60 hover:text-primary hover:border-primary/50 transition-colors" href="#">Active</a>
+<a class="py-2 px-1 text-sm font-medium border-b-2 border-transparent text-black/60 dark:text-white/60 hover:text-primary hover:border-primary/50 transition-colors" href="#">Inactive</a>
+</nav>
+</div>
+<div class="bg-background-light dark:bg-background-dark rounded-lg overflow-hidden border border-black/10 dark:border-white/10">
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-left">
+<thead class="bg-black/5 dark:bg-white/5">
+<tr>
+<th class="px-6 py-3 font-medium text-black/80 dark:text-white/80" scope="col">Status</th>
+<th class="px-6 py-3 font-medium text-black/80 dark:text-white/80" scope="col">Address</th>
+<th class="px-6 py-3 font-medium text-black/80 dark:text-white/80" scope="col">City</th>
+<th class="px-6 py-3 font-medium text-black/80 dark:text-white/80" scope="col">Date Listed</th>
+<th class="px-6 py-3 font-medium text-black/80 dark:text-white/80" scope="col">Inquiries</th>
+<th class="px-6 py-3 font-medium text-black/80 dark:text-white/80" scope="col">Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-black/10 dark:border-white/10 last:border-b-0">
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/20 text-primary">Active</span>
+</td>
+<td class="px-6 py-4 font-medium">123 Oak Street</td>
+<td class="px-6 py-4 text-black/60 dark:text-white/60">Springfield</td>
+<td class="px-6 py-4 text-black/60 dark:text-white/60">03/15/2024</td>
+<td class="px-6 py-4 text-black/60 dark:text-white/60">5</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<a class="font-medium text-primary hover:underline" href="#">Edit</a>
+<button class="text-red-500 hover:underline">Delete</button>
+</div>
+</td>
+</tr>
+<tr class="border-b border-black/10 dark:border-white/10 last:border-b-0">
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-black/20 dark:bg-white/20 text-black/70 dark:text-white/70">Inactive</span>
+</td>
+<td class="px-6 py-4 font-medium">456 Maple Avenue</td>
+<td class="px-6 py-4 text-black/60 dark:text-white/60">Shelbyville</td>
+<td class="px-6 py-4 text-black/60 dark:text-white/60">02/20/2024</td>
+<td class="px-6 py-4 text-black/60 dark:text-white/60">2</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<a class="font-medium text-primary hover:underline" href="#">Edit</a>
+<button class="text-red-500 hover:underline">Delete</button>
+</div>
+</td>
+</tr>
+<tr class="border-b border-black/10 dark:border-white/10 last:border-b-0">
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/20 text-primary">Active</span>
+</td>
+<td class="px-6 py-4 font-medium">789 Pine Lane</td>
+<td class="px-6 py-4 text-black/60 dark:text-white/60">Capital City</td>
+<td class="px-6 py-4 text-black/60 dark:text-white/60">01/10/2024</td>
+<td class="px-6 py-4 text-black/60 dark:text-white/60">8</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<a class="font-medium text-primary hover:underline" href="#">Edit</a>
+<button class="text-red-500 hover:underline">Delete</button>
+</div>
+</td>
+</tr>
+<tr class="border-b border-black/10 dark:border-white/10 last:border-b-0">
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/20 text-primary">Active</span>
+</td>
+<td class="px-6 py-4 font-medium">101 Elm Road</td>
+<td class="px-6 py-4 text-black/60 dark:text-white/60">Hill Valley</td>
+<td class="px-6 py-4 text-black/60 dark:text-white/60">04/01/2024</td>
+<td class="px-6 py-4 text-black/60 dark:text-white/60">3</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<a class="font-medium text-primary hover:underline" href="#">Edit</a>
+<button class="text-red-500 hover:underline">Delete</button>
+</div>
+</td>
+</tr>
+<tr class="border-b border-black/10 dark:border-white/10 last:border-b-0">
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-black/20 dark:bg-white/20 text-black/70 dark:text-white/70">Inactive</span>
+</td>
+<td class="px-6 py-4 font-medium">222 Cedar Court</td>
+<td class="px-6 py-4 text-black/60 dark:text-white/60">Gotham</td>
+<td class="px-6 py-4 text-black/60 dark:text-white/60">03/22/2024</td>
+<td class="px-6 py-4 text-black/60 dark:text-white/60">1</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<a class="font-medium text-primary hover:underline" href="#">Edit</a>
+<button class="text-red-500 hover:underline">Delete</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1193d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        display: ["Work Sans"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px",
+                    },
+                },
+            },
+        };
+    </script>
+
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex min-h-screen flex-col">
+<header class="sticky top-0 z-10 border-b border-gray-200 dark:border-gray-700 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-white" href="#">
+<span class="material-symbols-outlined text-primary text-3xl"> real_estate_agent </span>
+                            FindHome
+                        </a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="/Frontend/buy/code.html">Buy</a>
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="/Frontend/property_for_sale/code.html">Rent</a>
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="#">Manage Property</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary/90">Create Listing</button>
+<button class="md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="hidden md:block"><a href="/Frontend/profile_dashboard/code.html"><img alt="User Avatar" class="h-10 w-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoYHkXVMfBCKRs0eI-cxFve1xmxHIgZGpmle0wbPyFHgIy33tUUIbxRkkUGvIm0w_GdzQzbz8Poicq6S5Ch4oQEYEHpatUzGMkSjEjh83F2zUYA1woMPN0MEiBKayAzFNKBP1S5AYX3BISwsuH6KJlyUbAAb2n0DA2d0bbigHYL9Z1p29L7ZOyAnsA2EDKveLO3NZAn3I_Tm6eHtjoMb7kxGvGPgFmpoWS5rhT0eGl1f5Xf-Fltj3qN3xiI1OOETcKMSOQTP0y8A"/></a>
+
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex flex-col md:flex-row gap-8">
+<aside class="w-full md:w-64">
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
+<div class="flex flex-col items-center">
+<img alt="User Avatar" class="h-24 w-24 rounded-full mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoYHkXVMfBCKRs0eI-cxFve1xmxHIgZGpmle0wbPyFHgIy33tUUIbxRkkUGvIm0w_GdzQzbz8Poicq6S5Ch4oQEYEHpatUzGMkSjEjh83F2zUYA1woMPN0MEiBKayAzFNKBP1S5AYX3BISwsuH6KJlyUbAAb2n0DA2d0bbigHYL9Z1p29L7ZOyAnsA2EDKveLO3NZAn3I_Tm6eHtjoMb7kxGvGPgFmpoWS5rhT0eGl1f5Xf-Fltj3qN3xiI1OOETcKMSOQTP0y8A"/>
+<h2 class="text-xl font-bold text-gray-900 dark:text-white">John Doe</h2>
+<p class="text-sm text-gray-500 dark:text-gray-400">john.doe@example.com</p>
+<button class="mt-4 w-full rounded-lg bg-primary/10 dark:bg-primary/20 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/20 dark:hover:bg-primary/30">Edit Profile</button>
+</div>
+<nav class="mt-8 flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 bg-primary/10 dark:bg-primary/20 font-semibold" href="/Frontend/profile_dashboard/code.html">
+<span class="material-symbols-outlined">dashboard</span>
+                                    Dashboard
+                                </a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700/50" href="/Frontend/billing_settings/code.html">
+<span class="material-symbols-outlined">payment</span>
+                                    Payment History
+                                </a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700/50" href="/Frontend/booked_vistits/code.html">
+<span class="material-symbols-outlined">event_available</span>
+                                    Booked Visits
+                                </a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700/50" href="/Frontend/settings/code.html">
+<span class="material-symbols-outlined">settings</span>
+                                    Settings
+                                </a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10" href="/Frontend/login/sign-in/code.html">
+<span class="material-symbols-outlined">logout</span>
+                                    Logout
+                                </a>
+</nav>
+</div>
+</aside>
+<div class="flex-1">
+<div class="mb-8">
+<h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Profile Dashboard</h1>
+<p class="mt-2 text-lg text-gray-500 dark:text-gray-400">Welcome back, John! Here's your activity overview.</p>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 mb-8">
+<h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Payment History</h2>
+<div class="overflow-x-auto">
+<table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+<thead class="bg-gray-50 dark:bg-gray-700/50">
+<tr>
+<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider" scope="col">Date</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider" scope="col">Property</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider" scope="col">Amount</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider" scope="col">Status</th>
+</tr>
+</thead>
+<tbody class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-200">Jan 15, 2024</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">3-Bedroom Apartment, Buea</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-200 font-medium">$250,000</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm">
+<span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300">Paid</span>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-200">Dec 20, 2023</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">2-Bedroom Condo, Limbe</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-200 font-medium">$1,500</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm">
+<span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300">Paid</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
+<h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Booked Visits</h2>
+<div class="space-y-4">
+<div class="p-4 rounded-lg bg-gray-50 dark:bg-gray-700/50 flex items-center justify-between">
+<div>
+<p class="font-semibold text-gray-900 dark:text-white">4-Bedroom House, Douala</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Feb 5, 2024 at 10:00 AM</p>
+</div>
+<button class="text-primary hover:text-primary/80 text-sm font-semibold">Reschedule</button>
+</div>
+<div class="p-4 rounded-lg bg-gray-50 dark:bg-gray-700/50 flex items-center justify-between">
+<div>
+<p class="font-semibold text-gray-900 dark:text-white">1-Bedroom Studio, Yaounde</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Feb 8, 2024 at 2:00 PM</p>
+</div>
+<button class="text-primary hover:text-primary/80 text-sm font-semibold">Reschedule</button>
+</div>
+<div class="p-4 rounded-lg bg-gray-50 dark:bg-gray-700/50 flex items-center justify-between">
+<div>
+<p class="font-semibold text-gray-900 dark:text-white">2-Bedroom Condo, Limbe</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Feb 12, 2024 at 11:30 AM</p>
+</div>
+<span class="text-sm text-gray-400 dark:text-gray-500">Completed</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

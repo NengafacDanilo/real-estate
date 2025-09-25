@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    :root {
+      --accent-color: #059669;
+    }
+    .accent-bg {
+      background-color: var(--accent-color);
+    }
+    .accent-text {
+      color: var(--accent-color);
+    }
+    .accent-border {
+      border-color: var(--accent-color);
+    }
+    .accent-ring:focus {
+      --tw-ring-color: var(--accent-color);
+    }
+    .dark .dark\:accent-bg {
+      background-color: #10b981;
+    }
+    .dark .dark\:accent-text {
+      color: #10b981;
+    }
+    .dark .dark\:accent-border {
+      border-color: #10b981;
+    }
+  </style>
+<script>tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#359EFF", "background-light": "#f5f7f8", "background-dark": "#0f1923"}, fontFamily: {display: "Work Sans"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, boxShadow: {DEFAULT: "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)", md: "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)", lg: "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)", xl: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)"}}}};</script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
+    }
+    .carousel-item {
+      scroll-snap-align: start;
+      flex: none;
+    }
+  
+    .carousel {
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex min-h-screen flex-col">
+<header class="sticky top-0 z-30 bg-white dark:bg-gray-900 shadow-md">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-white" href="#">
+<span class="material-symbols-outlined text-primary text-3xl"> real_estate_agent </span>
+              FindHome
+            </a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="/Frontend/buy/code.html">Buy</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="/Frontend/property_for_sale/code.html">Rent</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="/Frontend/find_an_agent_page/code.html">Agents</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 hidden sm:block"><a href="/Frontend/index.html">LogOut</a></button>
+<button class="md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="hidden md:block"><a href="/Frontend/profile_dashboard/code.html"><img alt="User Avatar" class="h-10 w-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoYHkXVMfBCKRs0eI-cxFve1xmxHIgZGpmle0wbPyFHgIy33tUUIbxRkkUGvIm0w_GdzQzbz8Poicq6S5Ch4oQEYEHpatUzGMkSjEjh83F2zUYA1woMPN0MEiBKayAzFNKBP1S5AYX3BISwsuH6KJlyUbAAb2n0DA2d0bbigHYL9Z1p29L7ZOyAnsA2EDKveLO3NZAn3I_Tm6eHtjoMb7kxGvGPgFmpoWS5rhT0eGl1f5Xf-Fltj3qN3xiI1OOETcKMSOQTP0y8A"/></a>
+
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow bg-white dark:bg-gray-900">
+<div class="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
+<div class="carousel flex h-full w-full overflow-x-auto">
+<div class="carousel-item w-full h-full">
+<img alt="Property exterior" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgxtmWg0q7sl-MRAn1T9Oe7To3R_3Df4_P9zfiezcKp6w1MEhJlMI2tWb_WDdq8e8QuRpSa373yzKLFlsq_jtbpgKRjd_dazQfXBfD3rw8aqaZs54jp9j0kqJLmoxk2lfe36z6H7QrTNNMKXhU2aRqCQkgHbrQAx7w6EB1DN9fxm99vJA2-OAPxlXlVeGwiy-Iyk9iuHqKnC8Anqnk5WC1pE4veKbk8CzRjwknUqFOX3l9mMjuV9eIye9REQD_Vf3QcEqZGYb7-A"/>
+</div>
+<div class="carousel-item w-full h-full">
+<img alt="Living room" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIj5ntQ49MUcSNqLBAq0Q65gmc7dSLM0nxcTpZmwKBx0w7U-rcytBtbSA-Dgb5PPMfss3NiyhjRnOzUWg84sgW7ncYkt7hWYGkc2UkZgClaqjVb_uVuhHJOZFJYEQCWHYDai8dA_mjwBRGeial3qDtsdUXANBY2wybjeMdExdILCxe010eMS_5-OLeaNCOeGUV-3X_AS8Vp3OEAwcBu-tlCntkbMqpd7DtBTuyQLf6qLrBBQFazyizX_OxSvK-EeNSPnTo8U-DNw"/>
+</div>
+<div class="carousel-item w-full h-full">
+<img alt="Bedroom" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnuKwCs6vWsxtxpQjazdKbiI6ezYFr-cj_ah285kiI2F_zDk6GMKn82YUgWJMzjPTEvVDmBE8vX0cee-IgD0F5qLyGbrUsYBde6DfIKWyMbMhI2TxY38HbgLJq9q15j-rqgnWvxoDiERa1Rud4-FC3B84m6qqxfAdskNUTn_5t1o69wYskCN6rILXKjTpfYNO0vUqBVpwveD7_gs5f_ZTVxhF8inAl-VD-6pu0qvGU9tW9OYlokyKwz2YCdf0XYRaQIFJWomifWQ"/>
+</div>
+<div class="carousel-item w-full h-full relative">
+<img alt="Kitchen" class="w-full h-full object-cover brightness-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjAR4qZ68aoTJ0ptayi1bcV1X_MYZ0zCNkLCM_5h7pp67Omx7Vy-bUJvt2l6H51wKyEcA_kuSJsGHHki7HhPLuEcsk1Dy3R3TgfKgOAN7eqn4yN4_8fb-Q23ZAqBN_SjFxAfeeJfNLQYbjvBseGFCQclmydsa3LKUAQCoqY085aKwGCmCYDLmyznzIIwDMgkO4JZDCuIj5oOYDrRKNQ3-vl_SmL-_WtSq3CVwNwifHcGtXW4nDvHkhNpHjR207gCNKmlbpxf2PHA"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<button class="text-white flex items-center gap-2 bg-black/50 backdrop-blur-sm px-6 py-3 rounded-full hover:bg-black/70 transition-colors">
+<span class="material-symbols-outlined text-3xl">play_circle</span>
+<span class="font-semibold">Watch Video Tour</span>
+</button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+<button class="h-2 w-2 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity"></button>
+<button class="h-2 w-2 rounded-full bg-white opacity-100"></button>
+<button class="h-2 w-2 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity"></button>
+<button class="h-2 w-2 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity"></button>
+</div>
+<div class="absolute top-1/2 -translate-y-1/2 flex justify-between w-full px-4">
+<button class="h-10 w-10 rounded-full bg-white/20 text-white backdrop-blur-sm flex items-center justify-center hover:bg-white/40 shadow-md"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="h-10 w-10 rounded-full bg-white/20 text-white backdrop-blur-sm flex items-center justify-center hover:bg-white/40 shadow-md"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+<div class="absolute top-4 right-4 flex gap-2">
+<button class="h-10 w-10 rounded-full bg-white/20 text-white backdrop-blur-sm flex items-center justify-center hover:bg-white/40 shadow-md"><span class="material-symbols-outlined"><a href="/Frontend/saved_properties_page/code.html">favorite_border</a></span></button>
+<button class="h-10 w-10 rounded-full bg-white/20 text-white backdrop-blur-sm flex items-center justify-center hover:bg-white/40 shadow-md"><span class="material-symbols-outlined">share</span></button>
+</div>
+</div>
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+<div class="lg:grid lg:grid-cols-3 lg:gap-12">
+<div class="lg:col-span-2">
+<div class="mb-6">
+<h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Modern Villa with Ocean View</h1>
+<p class="text-lg text-gray-500 dark:text-gray-400 mt-1">123 Ocean Drive, Miami Beach, FL 33139</p>
+</div>
+<div class="flex flex-wrap gap-x-6 gap-y-4 border-y border-gray-200 dark:border-gray-700 py-6 mb-8">
+<div class="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-primary text-2xl">attach_money</span>
+<span class="text-2xl font-bold text-primary">$2,450,000</span>
+</div>
+<div class="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-gray-500">bed</span>
+<span class="font-medium">4 Bedrooms</span>
+</div>
+<div class="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-gray-500">bathtub</span>
+<span class="font-medium">5 Bathrooms</span>
+</div>
+<div class="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-gray-500">square_foot</span>
+<span class="font-medium">3,200 sqft</span>
+</div>
+</div>
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">About this property</h2>
+<div class="prose prose-lg dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
+<p>Welcome to your dream coastal retreat! This stunning modern villa offers breathtaking ocean views from every room. The open-concept living space is perfect for entertaining, featuring a gourmet kitchen with high-end appliances and a spacious living area that opens to a large private terrace.</p>
+<p>The master suite is a true sanctuary with a spa-like bathroom and a private balcony. Three additional bedrooms provide ample space for family and guests. Outside, enjoy the infinity pool, outdoor kitchen, and direct beach access. This is luxury living at its finest.</p>
+</div>
+</div>
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Amenities</h2>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+<div class="flex items-center gap-3 bg-gray-50 dark:bg-gray-800 p-3 rounded-lg"><span class="material-symbols-outlined text-primary">pool</span><span>Swimming Pool</span></div>
+<div class="flex items-center gap-3 bg-gray-50 dark:bg-gray-800 p-3 rounded-lg"><span class="material-symbols-outlined text-primary">local_parking</span><span>Garage</span></div>
+<div class="flex items-center gap-3 bg-gray-50 dark:bg-gray-800 p-3 rounded-lg"><span class="material-symbols-outlined text-primary">balcony</span><span>Terrace</span></div>
+<div class="flex items-center gap-3 bg-gray-50 dark:bg-gray-800 p-3 rounded-lg"><span class="material-symbols-outlined text-primary">air</span><span>Air Conditioning</span></div>
+<div class="flex items-center gap-3 bg-gray-50 dark:bg-gray-800 p-3 rounded-lg"><span class="material-symbols-outlined text-primary">outdoor_grill</span><span>Outdoor Kitchen</span></div>
+<div class="flex items-center gap-3 bg-gray-50 dark:bg-gray-800 p-3 rounded-lg"><span class="material-symbols-outlined text-primary">beach_access</span><span>Beach Access</span></div>
+<div class="flex items-center gap-3 bg-gray-50 dark:bg-gray-800 p-3 rounded-lg"><span class="material-symbols-outlined text-primary">security</span><span>24/7 Security</span></div>
+<div class="flex items-center gap-3 bg-gray-50 dark:bg-gray-800 p-3 rounded-lg"><span class="material-symbols-outlined text-primary">fitness_center</span><span>Gym</span></div>
+</div>
+</div>
+<div>
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Location</h2>
+<div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-md">
+<iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.896684725359!2d-80.1329166849791!3d25.7408809836468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b4f4c0a5a5d7%3A0x7e8f5a6b5a3b2b1e!2sMiami%20Beach%2C%20FL%2C%20USA!5e0!3m2!1sen!2s!4v1678886456789!5m2!1sen!2s" style="border: 0" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1 mt-10 lg:mt-0">
+<div class="sticky top-24 space-y-8">
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+<div class="flex items-center gap-4 mb-4">
+<img alt="Agent photo" class="w-16 h-16 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2Gk_YL-cKD7icNP0adbrhee-WxZchX25TZOkc7ruiejAOJg1zCPwODd30VuvWhKM21acNZiI_QL5SNiHYvMztSQtAtwTap3dITb7rW6BLco50B4hEF2whYowzoO9wO8dlv_fDRKuUcCylO5O-qjHXAydpTolzCg9qRV1BFYen0Uev6G-LMBG2MkzuHdmES666w9bEHImOIMIQR0QlcH5urIKFXdfDFs62OckJD6HG1Gd7-GEbd78jvarRKemoH0TCmeTl6h2zJQ"/>
+<div>
+<h3 class="font-bold text-lg text-gray-900 dark:text-white">Johnathan Doe</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Listing Agent</p>
+</div>
+</div>
+<div class="flex items-center gap-2 text-green-600 dark:text-green-400 mb-6">
+<span class="material-symbols-outlined text-lg">verified</span>
+<span class="text-sm font-medium">Verified Agent</span>
+</div>
+<div class="space-y-3">
+<button class="w-full flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-base font-semibold text-white shadow-md hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined">call</span>
+                    <a href="/Frontend/find_an_agent_page/code.html">Contact Agent</a>
+                  </button>
+<button class="w-full flex items-center justify-center gap-2 rounded-lg bg-gray-100 dark:bg-gray-700 px-5 py-3 text-base font-semibold text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all">
+<span class="material-symbols-outlined">calendar_today</span>
+                   <a href="/Frontend/book_a_visit_pop-up_form/code.html">Book a Visit</a> 
+                  </button>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4">Mortgage Calculator</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Estimate your monthly payment.</p>
+<button class="w-full rounded-lg bg-primary/10 dark:bg-primary/20 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+                  Calculate
+                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<div class="sticky bottom-0 z-20 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 p-4 lg:hidden shadow-[0_-2px_10px_rgba(0,0,0,0.1)]">
+<div class="flex items-center justify-center gap-3">
+<button class="w-full flex-1 rounded-lg bg-gray-200 dark:bg-gray-700 px-4 py-3 text-sm font-semibold text-gray-800 dark:text-gray-200">
+          Contact Agent
+        </button>
+<button class="w-full flex-1 rounded-lg bg-primary px-4 py-3 text-sm font-semibold text-white">
+          Book a Visit
+        </button>
+</div>
+</div>
+</div>
+</body></html>

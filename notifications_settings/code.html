@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FindHome - Notification Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#359EFF",
+            "background-light": "#f5f7f8",
+            "background-dark": "#0f1923",
+            "foreground-light": "#111816",
+            "foreground-dark": "#f6f8f7",
+            "card-light": "#ffffff",
+            "card-dark": "#182c25",
+            "subtle-light": "#61897c",
+            "subtle-dark": "#a0b8b1",
+            "border-light": "#f0f4f3",
+            "border-dark": "#203a31"
+          },
+          fontFamily: {
+            display: "Work Sans"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    .toggle-checkbox:checked {
+      right: 0.125rem;
+      background-color: white;
+    }
+    .toggle-checkbox:checked + .toggle-label {
+      background-color: #11d493;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-foreground-light dark:text-foreground-dark">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-10 bg-card-light/80 dark:bg-card-dark/80 backdrop-blur-sm border-b border-border-light dark:border-border-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-2">
+<div class="text-primary size-8">
+<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M2 17L12 22L22 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M2 12L12 17L22 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold">Find<span class="text-primary">Home</span></h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="/Frontend/buy/code.html">Buy</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="/Frontend/property_for_sale/code.html">Rent</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Sell</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Find Agent</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center size-10 rounded-full bg-background-light dark:bg-background-dark hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,220.66,240,164,240,94A62.07,62.07,0,0,0,178,32ZM128,206.8C109.74,196.16,32,147.69,32,94A46.06,46.06,0,0,1,78,48c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,147.61,146.24,196.15,128,206.8Z"></path>
+</svg>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full bg-background-light dark:bg-background-dark hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path>
+</svg>
+</button>
+<div class="ml-2">
+<img alt="User profile picture" class="size-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiWPo8oFJ5S1lT7oh3thwRkAzxUnkhEvbJoUdmrXhS7ejdLmyZpwXOqwjqRur93X_ACYlWenXUN41nC3BYXnOIM3cTQB69BVUKAD72beVhVuhDY4VpCjeRQD-4-sjnUwGfn3plM9F3R5cYqmDkf9MxAO98ij9oOQFKJsdQsrWIXt40lMBfJ8vqmE1Q2e-s_yhl72jhBvtBZPIilLuzZ3zE7Frkk8j1ytPg-RP80AMi6zrdKA4vRcp2u-Fz-iJIu4zgZ922_uCuow"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+<div class="flex flex-col lg:flex-row gap-8">
+<aside class="w-full lg:w-64 xl:w-72">
+<div class="sticky top-24">
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-primary/20 dark:hover:bg-primary/30" href="/Frontend/profile_dashboard/code.html">
+<svg class="text-subtle-light dark:text-subtle-dark" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+</svg>
+<span class="text-sm font-medium">Edit Profile</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/20 dark:bg-primary/30 text-primary font-semibold" href="/Frontend/notifications_settings/code.html">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216Z"></path>
+</svg>
+<span class="text-sm font-medium">Notifications</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-primary/20 dark:hover:bg-primary/30" href="/Frontend/security_settings/code.html">
+<svg class="text-subtle-light dark:text-subtle-dark" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M208,40H48A16,16,0,0,0,32,56v58.78c0,89.61,75.82,119.34,91,124.39a15.53,15.53,0,0,0,10,0c15.2-5.05,91-34.78,91-124.39V56A16,16,0,0,0,208,40Zm0,74.79c0,78.42-66.35,104.62-80,109.18-13.53-4.51-80-30.69-80-109.18V56H208ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.68l50.34-50.34a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"></path>
+</svg>
+<span class="text-sm font-medium">Security</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-primary/20 dark:hover:bg-primary/30" href="/Frontend/privacy_settings/code.html">
+<svg class="text-subtle-light dark:text-subtle-dark" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V96a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm20,32a12,12,0,1,1-12-12A12,12,0,0,1,140,168Z"></path>
+</svg>
+<span class="text-sm font-medium">Privacy</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-primary/20 dark:hover:bg-primary/30" href="/Frontend/billing_settings/code.html">
+<svg class="text-subtle-light dark:text-subtle-dark" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,56H32A16,16,0,0,0,16,72V184a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V72A16,16,0,0,0,224,56Zm0,16V96H32V72ZM32,184V112H224v72Z"></path>
+</svg>
+<span class="text-sm font-medium">Payment Info</span>
+</a>
+</nav>
+</div>
+</aside>
+<div class="flex-1">
+<div class="mb-8">
+<h2 class="text-3xl font-bold tracking-tight">Notifications</h2>
+<p class="text-subtle-light dark:text-subtle-dark mt-1">Manage how you receive notifications from FindHome.</p>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-sm">
+<section>
+<h3 class="text-lg font-semibold border-b border-border-light dark:border-border-dark pb-4 mb-4">Email Notifications</h3>
+<div class="space-y-4">
+<div class="flex items-start justify-between py-2">
+<div>
+<h4 class="font-medium">New listings</h4>
+<p class="text-sm text-subtle-light dark:text-subtle-dark mt-1">Get notified when new properties matching your saved searches are listed.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer ml-4">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-background-light peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary/50 dark:peer-focus:ring-primary/80 rounded-full peer dark:bg-background-dark peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white dark:after:bg-gray-400 after:border-gray-300 dark:after:border-gray-500 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-start justify-between py-2">
+<div>
+<h4 class="font-medium">Price changes</h4>
+<p class="text-sm text-subtle-light dark:text-subtle-dark mt-1">Receive alerts when the price of a property you're interested in changes.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer ml-4">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-background-light peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary/50 dark:peer-focus:ring-primary/80 rounded-full peer dark:bg-background-dark peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white dark:after:bg-gray-400 after:border-gray-300 dark:after:border-gray-500 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-start justify-between py-2">
+<div>
+<h4 class="font-medium">Messages</h4>
+<p class="text-sm text-subtle-light dark:text-subtle-dark mt-1">Be notified when you receive new messages from agents or other users.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer ml-4">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-background-light peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary/50 dark:peer-focus:ring-primary/80 rounded-full peer dark:bg-background-dark peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white dark:after:bg-gray-400 after:border-gray-300 dark:after:border-gray-500 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-start justify-between py-2">
+<div>
+<h4 class="font-medium">Saved property updates</h4>
+<p class="text-sm text-subtle-light dark:text-subtle-dark mt-1">Stay updated on the status of properties you've saved, such as open houses or sales.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer ml-4">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-background-light peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary/50 dark:peer-focus:ring-primary/80 rounded-full peer dark:bg-background-dark peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white dark:after:bg-gray-400 after:border-gray-300 dark:after:border-gray-500 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<section class="mt-8">
+<h3 class="text-lg font-semibold border-b border-border-light dark:border-border-dark pb-4 mb-4">Push Notifications</h3>
+<div class="space-y-4">
+<div class="flex items-start justify-between py-2">
+<div>
+<h4 class="font-medium">New listings</h4>
+<p class="text-sm text-subtle-light dark:text-subtle-dark mt-1">Get notified when new properties matching your saved searches are listed.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer ml-4">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-background-light peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary/50 dark:peer-focus:ring-primary/80 rounded-full peer dark:bg-background-dark peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white dark:after:bg-gray-400 after:border-gray-300 dark:after:border-gray-500 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-start justify-between py-2">
+<div>
+<h4 class="font-medium">Price changes</h4>
+<p class="text-sm text-subtle-light dark:text-subtle-dark mt-1">Receive alerts when the price of a property you're interested in changes.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer ml-4">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-background-light peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary/50 dark:peer-focus:ring-primary/80 rounded-full peer dark:bg-background-dark peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white dark:after:bg-gray-400 after:border-gray-300 dark:after:border-gray-500 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-start justify-between py-2">
+<div>
+<h4 class="font-medium">Messages</h4>
+<p class="text-sm text-subtle-light dark:text-subtle-dark mt-1">Be notified when you receive new messages from agents or other users.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer ml-4">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-background-light peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary/50 dark:peer-focus:ring-primary/80 rounded-full peer dark:bg-background-dark peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white dark:after:bg-gray-400 after:border-gray-300 dark:after:border-gray-500 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-start justify-between py-2">
+<div>
+<h4 class="font-medium">Saved property updates</h4>
+<p class="text-sm text-subtle-light dark:text-subtle-dark mt-1">Stay updated on the status of properties you've saved, such as open houses or sales.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer ml-4">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-background-light peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary/50 dark:peer-focus:ring-primary/80 rounded-full peer dark:bg-background-dark peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white dark:after:bg-gray-400 after:border-gray-300 dark:after:border-gray-500 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Work+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0684f9",
+              "background-light": "#f5f7f8",
+              "background-dark": "#0f1923",
+              "success-light": "#15803d",
+              "success-dark": "#34d399",
+              "error-light": "#b91c1c",
+              "error-dark": "#f87171",
+              "foreground-light": "#0f1923",
+              "foreground-dark": "#f5f7f8",
+              "border-light": "#e5e7eb",
+              "border-dark": "#374151",
+              "muted-foreground-light": "#6b7280",
+              "muted-foreground-dark": "#9ca3af",
+            },
+            fontFamily: {
+              display: ["Work Sans", "sans-serif"],
+            },
+            borderRadius: { DEFAULT: "0.5rem", lg: "0.75rem", xl: "1rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-foreground-light dark:text-foreground-dark">
+<div class="flex min-h-screen w-full flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-border-light dark:border-border-dark px-10 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold">PropertyPulse</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+<a class="text-muted-foreground-light dark:text-muted-foreground-dark hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-muted-foreground-light dark:text-muted-foreground-dark hover:text-primary transition-colors" href="#">Listings</a>
+<a class="text-muted-foreground-light dark:text-muted-foreground-dark hover:text-primary transition-colors" href="#">Leads</a>
+<a class="text-primary font-bold" href="#">Analytics</a>
+<a class="text-muted-foreground-light dark:text-muted-foreground-dark hover:text-primary transition-colors" href="#">Resources</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-background-light dark:bg-background-dark hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-muted-foreground-light dark:text-muted-foreground-dark"> notifications </span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAIp67I3BxwbrN-WdgSDDXgWXmOsK7HH8cHpevU-_htG9wauyoqAenAHDeGJiPQ8VXc519sDiglVRHoOOZ-LKBSKauw4nbY7ml7Fuhlc-39DAcwq3VSLPJlDp558xyo5cgabWcG4fJWmSkudaVc9WYxvxyKlm8wcAFROtE6EzzrqLH9Jf5Kd8jFJBdrQO5HmCLxU7Pv4NSGwzYHWC5q81b2s-JNegkVR0BkejUBl-wGp1-7w6ORLbdCp2ACLuLJUekfpcGTM1n7iQ");'></div>
+</div>
+</header>
+<main class="flex-1 px-4 sm:px-6 lg:px-20 py-8">
+<div class="mx-auto max-w-7xl">
+<div class="mb-8">
+<h1 class="text-3xl font-bold tracking-tight">Performance Analytics</h1>
+<p class="text-muted-foreground-light dark:text-muted-foreground-dark mt-1">Track your listing performance, lead generation, and overall activity.</p>
+</div>
+<div class="border-b border-border-light dark:border-border-dark mb-8">
+<nav aria-label="Tabs" class="flex -mb-px gap-8">
+<a class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-primary text-primary" href="#"> Overview </a>
+<a class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-transparent text-muted-foreground-light dark:text-muted-foreground-dark hover:text-foreground-light dark:hover:text-foreground-dark hover:border-border-dark dark:hover:border-border-light" href="#">
+                Listings
+              </a>
+<a class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-transparent text-muted-foreground-light dark:text-muted-foreground-dark hover:text-foreground-light dark:hover:text-foreground-dark hover:border-border-dark dark:hover:border-border-light" href="#">
+                Leads
+              </a>
+</nav>
+</div>
+<section class="mb-12">
+<h2 class="text-2xl font-bold tracking-tight mb-4">Key Metrics</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-lg p-6 flex flex-col gap-2">
+<p class="text-sm font-medium text-muted-foreground-light dark:text-muted-foreground-dark">Total Listing Views</p>
+<p class="text-3xl font-bold">1,250</p>
+<div class="flex items-center gap-1 text-sm font-medium text-success-light dark:text-success-dark">
+<span class="material-symbols-outlined text-lg"> arrow_upward </span>
+<span>+12%</span>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-lg p-6 flex flex-col gap-2">
+<p class="text-sm font-medium text-muted-foreground-light dark:text-muted-foreground-dark">Inquiry Rate</p>
+<p class="text-3xl font-bold">5.2%</p>
+<div class="flex items-center gap-1 text-sm font-medium text-error-light dark:text-error-dark">
+<span class="material-symbols-outlined text-lg"> arrow_downward </span>
+<span>-3%</span>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-lg p-6 flex flex-col gap-2">
+<p class="text-sm font-medium text-muted-foreground-light dark:text-muted-foreground-dark">Conversion Rate</p>
+<p class="text-3xl font-bold">2.1%</p>
+<div class="flex items-center gap-1 text-sm font-medium text-success-light dark:text-success-dark">
+<span class="material-symbols-outlined text-lg"> arrow_upward </span>
+<span>+5%</span>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-2xl font-bold tracking-tight mb-4">Performance Over Time</h2>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-lg p-6">
+<h3 class="text-lg font-medium">Listing Views</h3>
+<p class="text-3xl font-bold mt-2">+15%</p>
+<div class="flex items-center gap-2 mt-1">
+<p class="text-sm text-muted-foreground-light dark:text-muted-foreground-dark">Last 30 Days</p>
+<p class="text-sm font-medium text-success-light dark:text-success-dark">+15%</p>
+</div>
+<div class="h-64 mt-4">
+<svg fill="none" height="100%" preserveAspectRatio="none" viewBox="0 0 475 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H0V109Z" fill="url(#chart-gradient)"></path>
+<path class="text-primary" d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="chart-gradient" x1="236" x2="236" y1="1" y2="149">
+<stop class="text-primary/20 dark:text-primary/30" stop-color="currentColor"></stop>
+<stop class="text-primary/0" offset="1" stop-color="currentColor"></stop>
+</linearGradient>
+</defs>
+</svg>
+</div>
+<div class="flex justify-between text-xs text-muted-foreground-light dark:text-muted-foreground-dark mt-2">
+<span>Week 1</span>
+<span>Week 2</span>
+<span>Week 3</span>
+<span>Week 4</span>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-lg p-6">
+<h3 class="text-lg font-medium">Lead Generation</h3>
+<p class="text-3xl font-bold mt-2">-8%</p>
+<div class="flex items-center gap-2 mt-1">
+<p class="text-sm text-muted-foreground-light dark:text-muted-foreground-dark">Last 30 Days</p>
+<p class="text-sm font-medium text-error-light dark:text-error-dark">-8%</p>
+</div>
+<div class="grid grid-cols-4 gap-4 items-end h-64 mt-4 px-2">
+<div class="flex flex-col items-center gap-2">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded-t-lg" style="height: 20%"></div>
+<p class="text-xs text-muted-foreground-light dark:text-muted-foreground-dark">W1</p>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded-t-lg" style="height: 70%"></div>
+<p class="text-xs text-muted-foreground-light dark:text-muted-foreground-dark">W2</p>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded-t-lg" style="height: 10%"></div>
+<p class="text-xs text-muted-foreground-light dark:text-muted-foreground-dark">W3</p>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded-t-lg" style="height: 80%"></div>
+<p class="text-xs text-muted-foreground-light dark:text-muted-foreground-dark">W4</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+
+</body></html>

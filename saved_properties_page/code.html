@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HomeFinder - Saved Properties</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#1193d4",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            display: ["Work Sans"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+        },
+      },
+    };
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex flex-col min-h-screen">
+<header class="bg-white dark:bg-[#1a2c36] shadow-sm">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2 text-2xl font-bold text-gray-800 dark:text-white" href="#">
+<span class="material-symbols-outlined text-primary text-4xl">
+                  real_estate_agent
+                  </span>
+<span class="text-3xl font-bold">DreamScape</span>
+</a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="/Frontend/buy/code.html">Buy</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="/Frontend/property_for_sale/code.html">Rent</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Sell</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Mortgage</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Find Agent</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex items-center">
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500">search</span>
+</div>
+<input class="bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 text-gray-800 dark:text-gray-200 rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent w-40 sm:w-64 transition-all" placeholder="Search" type="text"/>
+</div>
+</div>
+<button class="relative text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+<span class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-white text-xs font-bold">4</span>
+</button>
+<button class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="flex-shrink-0">
+<img alt="User avatar" class="h-10 w-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEQPk1H5qXqG_n1aB0muCd7XaZ56869-6b9ifUZWsO8ecn6vIyi5uaZJQf-VkuzFLI0gOgYIK_x9AX81AmubYqVQJmRyGw4bECRh58zhE7-KEJP-jWMC12b-H0nM_2qJ9Lo5z7O-SwFbehR6ZXl7RlYwy232wSQdvuzxIzqT3q6mkFOMT82uOveellVg4_Vq4CTtBxtebMMcwTj1fU8AFiG4szxVT-BwHfhIP4jv2Qfc_erJtJVqz4IX-ZT4K4poMp1yMLojgjMw"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="max-w-7xl mx-auto">
+<h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+            Saved Properties
+          </h1>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<div class="bg-white dark:bg-[#1a2c36] rounded-xl shadow-md overflow-hidden group">
+<div class="relative">
+<img alt="Charming 3-Bedroom Home in Lakeside" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfrrE_r-ZMZy7wSYSTzzgUtoliEObAG1OL4xbEQcbhIfBWmLSsb9RuUcUyw64U2QqiD2Cf9XQn-mM9use3vZVOAuyWyzJCqrhHcmw6LHCOjLy9S3oJC_mUbi-0lzlKUJa16rzoYGNAMgOOazULG4hrpxICMxjc6TCIrGn_TFu-rubUxiRfoi2ksmpMJRLae0OrQ51v0A3S8hB86tt-Ifuh2X0eLzCnzI3YzccEkGBbqo1UcceO5_1CiBMR8eZ9e15R319-TqEb4w"/>
+<div class="absolute top-2 right-2">
+<button class="bg-white/70 dark:bg-black/50 p-2 rounded-full text-primary hover:bg-white dark:hover:bg-black transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+<p class="text-white text-2xl font-bold">$450,000</p>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white truncate">
+                  Charming 3-Bedroom Home
+                </h3>
+<p class="text-sm text-gray-600 dark:text-gray-400">
+                  Lakeside, Suburbia
+                </p>
+<div class="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mt-2">
+<span><span class="font-bold text-gray-800 dark:text-gray-200">3</span> beds</span>
+<span><span class="font-bold text-gray-800 dark:text-gray-200">2</span> baths</span>
+<span><span class="font-bold text-gray-800 dark:text-gray-200">1,800</span> sqft</span>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1a2c36] rounded-xl shadow-md overflow-hidden group">
+<div class="relative">
+<img alt="Modern 2-Bedroom Apartment in Downtown" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChN6Ic5m3FtIRRxrQ8G9IDyKkBqgut2QStJS9KGmB-dN_UHj1ffRtbss0ooqqdKbQT9qSZOvC23JNZy0j-UfC3eqWidWW6viAI_Imhps-pa5_uaTYkPPbEBMcLPWFI6NlvTEtJ0bVyneExlp9jF4PYeMcWNQFUOTOdmvizSkE3_P7uNfFJj8dMOF7TFpw3cC1G24SP98-C_RMsc-RsU9gpn3KpG1pC7hXQfE7ekFhDRtVAuPA5onVLTNLmHe8sVFkzO5Mmk0dLmQ"/>
+<div class="absolute top-2 right-2">
+<button class="bg-white/70 dark:bg-black/50 p-2 rounded-full text-primary hover:bg-white dark:hover:bg-black transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+<p class="text-white text-2xl font-bold">$620,000</p>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white truncate">
+                  Modern 2-Bedroom Apartment
+                </h3>
+<p class="text-sm text-gray-600 dark:text-gray-400">
+                  Downtown, Metro City
+                </p>
+<div class="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mt-2">
+<span><span class="font-bold text-gray-800 dark:text-gray-200">2</span> beds</span>
+<span><span class="font-bold text-gray-800 dark:text-gray-200">2</span> baths</span>
+<span><span class="font-bold text-gray-800 dark:text-gray-200">1,200</span> sqft</span>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1a2c36] rounded-xl shadow-md overflow-hidden group">
+<div class="relative">
+<img alt="Spacious 4-Bedroom House with Garden" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXN26Nr-89YWWUOswtkZXEU7zJOzY4e29X8GmZtBHSaP08qX9YbrrCiPuN4xilWHa_pVZroW3SbuihWUqMM0z_uRk9rQZMdLl0z0kl4FnQrwq2hNdt0n77ubAQ_6-HJCKVC7cxbnIOCTSLFkg1S_E0NdHR3KK36CD18AZNwg1lrfMVxGlqNYN2HMKcpV9bw76o3XPJaShAh0MB39l-YOfIUYWFcnNuasCObU8HQVksoy0A6grWO0PtWFbqMnzK2y42Yl_ue5BSaQ"/>
+<div class="absolute top-2 right-2">
+<button class="bg-white/70 dark:bg-black/50 p-2 rounded-full text-primary hover:bg-white dark:hover:bg-black transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+<p class="text-white text-2xl font-bold">$890,000</p>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white truncate">
+                  Spacious 4-Bedroom House
+                </h3>
+<p class="text-sm text-gray-600 dark:text-gray-400">
+                  Green Valley, Countryside
+                </p>
+<div class="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mt-2">
+<span><span class="font-bold text-gray-800 dark:text-gray-200">4</span> beds</span>
+<span><span class="font-bold text-gray-800 dark:text-gray-200">3</span> baths</span>
+<span><span class="font-bold text-gray-800 dark:text-gray-200">2,500</span> sqft</span>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1a2c36] rounded-xl shadow-md overflow-hidden group">
+<div class="relative">
+<img alt="Cozy 1-Bedroom Condo with City Views" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXDLD7gA3fWZKIVp3Lk7eYqsLVSoihky7hOylVFnxF1mmH5KgLrXV2IBGizvIxZm451F08tL4UY0kBunGtBglBZ5KgCgMIZydC1MNEFkKpo7HtlObg-o7WLuJ4Re_iviL-6P9s3qXORQUx3-gk165q2mjhsI1IdxmQo-yE98aqWMhiFcHvQv8nTKsZxwwyyBWZosWkg-C2TWGR4ZZ-E8L3CsIQayyar1U_J5E1QxljFiFFYL97dlIGT_UZ1-KcCYKzCJZc8tO8Fg"/>
+<div class="absolute top-2 right-2">
+<button class="bg-white/70 dark:bg-black/50 p-2 rounded-full text-primary hover:bg-white dark:hover:bg-black transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+<p class="text-white text-2xl font-bold">$350,000</p>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white truncate">
+                  Cozy 1-Bedroom Condo
+                </h3>
+<p class="text-sm text-gray-600 dark:text-gray-400">
+                  Uptown, City Center
+                </p>
+<div class="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mt-2">
+<span><span class="font-bold text-gray-800 dark:text-gray-200">1</span> bed</span>
+<span><span class="font-bold text-gray-800 dark:text-gray-200">1</span> bath</span>
+<span><span class="font-bold text-gray-800 dark:text-gray-200">800</span> sqft</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

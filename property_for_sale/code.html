@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1193d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              display: ["Work Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex min-h-screen flex-col">
+<header class="sticky top-0 z-10 border-b border-gray-200 dark:border-gray-700 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-white" href="/Frontend/home_page/code.html">
+<span class="material-symbols-outlined text-primary text-3xl"> real_estate_agent </span>
+                HomeFinder
+              </a>
+              <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+                <a href="/Frontend/buy/code.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Buy</a>
+                <a href="/Frontend/property_for_sale/code.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Sell</a>
+                <a href="/Frontend/about_us_page/code.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">About Us</a>
+                <a href="/Frontend/find_an_agent_page/code.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Find Agent</a>
+                <a href="/Frontend/frequenly_questions/code.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">FAQ</a>
+              </nav>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="#">Buy</a>
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="#">Rent</a>
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="#">Sell</a>
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="#">Manage Property</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary/90">Create Listing</button>
+<button class="md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="hidden md:block">
+<img alt="User Avatar" class="h-10 w-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoYHkXVMfBCKRs0eI-cxFve1xmxHIgZGpmle0wbPyFHgIy33tUUIbxRkkUGvIm0w_GdzQzbz8Poicq6S5Ch4oQEYEHpatUzGMkSjEjh83F2zUYA1woMPN0MEiBKayAzFNKBP1S5AYX3BISwsuH6KJlyUbAAb2n0DA2d0bbigHYL9Z1p29L7ZOyAnsA2EDKveLO3NZAn3I_Tm6eHtjoMb7kxGvGPgFmpoWS5rhT0eGl1f5Xf-Fltj3qN3xiI1OOETcKMSOQTP0y8A"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="max-w-7xl mx-auto">
+<div class="mb-8 text-center">
+<h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">Properties For Sale</h1>
+<p class="mt-4 max-w-2xl mx-auto text-lg text-gray-500 dark:text-gray-400">Explore a wide range of properties available for sale in your desired location.</p>
+</div>
+<div class="mb-8 sticky top-16 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm py-4 rounded-xl">
+<div class="flex flex-col sm:flex-row gap-4">
+<div class="relative flex-grow">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"> search </span>
+<input class="w-full rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 py-3 pl-10 pr-4 focus:border-primary focus:ring-primary text-sm" placeholder="Search by city, address, or ZIP code" type="text"/>
+</div>
+<div class="flex items-center justify-center rounded-lg bg-gray-200 dark:bg-gray-700/50 p-1">
+<label class="flex cursor-pointer items-center justify-center rounded-md px-3 py-2 text-sm font-medium has-[:checked]:bg-white has-[:checked]:dark:bg-gray-800 has-[:checked]:shadow-sm">
+<input checked="" class="sr-only" name="view-toggle" type="radio" value="Grid View"/>
+<span class="material-symbols-outlined mr-2"> grid_view </span>
+                    Grid
+                  </label>
+<label class="flex cursor-pointer items-center justify-center rounded-md px-3 py-2 text-sm font-medium has-[:checked]:bg-white has-[:checked]:dark:bg-gray-800 has-[:checked]:shadow-sm">
+<input class="sr-only" name="view-toggle" type="radio" value="List View"/>
+<span class="material-symbols-outlined mr-2"> view_list </span>
+                    List
+                  </label>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+<div class="group relative flex flex-col overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<img alt="Modern apartment exterior" class="h-56 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtyRILesnV3JmbR-vTHl6tFXOjzboOBqEKsHh6gTsxLaDutpDmP5SfCuleGKnNMWuEGigX4yGzPU4LhLQbt8MV9A1UnyXGRF-JmqODmVTG49EUraY7V7UDlQIN-F0m7kKYndVkdSN7XEbp-SizlgyaapHPMjpVt-Cf1z1KJDJqiQYv1exc8sSuCbN9-PCr4QKr4NPkaOZKlumOAIKzWnhdTjmKF0j-XmIIcclaNVFOl7K6DbkmL5SxEV_6GO5A4dQMIkI2JuucmQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4 text-white">
+<h3 class="text-lg font-semibold">3-Bedroom Apartment</h3>
+<p class="text-sm">Buea</p>
+</div>
+<div class="absolute top-4 right-4 flex gap-2">
+<button class="h-8 w-8 rounded-full bg-white/20 text-white backdrop-blur-sm flex items-center justify-center hover:bg-white/40"><span class="material-symbols-outlined text-lg">chevron_left</span></button>
+<button class="h-8 w-8 rounded-full bg-white/20 text-white backdrop-blur-sm flex items-center justify-center hover:bg-white/40"><span class="material-symbols-outlined text-lg">chevron_right</span></button>
+</div>
+</div>
+<div class="flex-grow p-4">
+<div class="flex justify-between items-center mb-2">
+<p class="text-xl font-bold text-primary">$250,000</p>
+</div>
+<div class="grid grid-cols-3 gap-2 text-sm text-gray-600 dark:text-gray-400 mb-4">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-base">bed</span> 3 Beds</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-base">bathtub</span> 2 Baths</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-base">square_foot</span> 1,200 sqft</div>
+</div>
+</div>
+<div class="p-4 pt-0">
+<button class="w-full rounded-lg bg-primary/10 dark:bg-primary/20 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/20 dark:hover:bg-primary/30">View Details</button>
+</div>
+</div>
+<div class="group relative flex flex-col overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<img alt="Modern apartment exterior" class="h-56 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc5wgp6TRvhgNqAUqCYHkRRDlGYER0xMAx-Rk82VxJNzL7HH3DwoXVTdGDWcp2vEnTXxwtqJidC7-wvAJ5rqK9D8yyx13cw2x1zHj3qDj4UELrv7fykf-CMmFE9cXmao57ctS9C5cSzj1YPq1yvqs0stuGN3uCKHRT_b_ACr_tnsIZyKI3WLWR2QVRkEVHSELs_tiAtQt-wP96sv-v8c8WehAiCgGXAT199HltfrwICFF2RPK04Mr5dk4UVnDqt1BUmsotDaLZHg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4 text-white">
+<h3 class="text-lg font-semibold">2-Bedroom Condo</h3>
+<p class="text-sm">Limbe</p>
+</div>
+<div class="absolute top-4 right-4 flex gap-2">
+<button class="h-8 w-8 rounded-full bg-white/20 text-white backdrop-blur-sm flex items-center justify-center hover:bg-white/40"><span class="material-symbols-outlined text-lg">chevron_left</span></button>
+<button class="h-8 w-8 rounded-full bg-white/20 text-white backdrop-blur-sm flex items-center justify-center hover:bg-white/40"><span class="material-symbols-outlined text-lg">chevron_right</span></button>
+</div>
+</div>
+<div class="flex-grow p-4">
+<div class="flex justify-between items-center mb-2">
+<p class="text-xl font-bold text-primary">$180,000</p>
+</div>
+<div class="grid grid-cols-3 gap-2 text-sm text-gray-600 dark:text-gray-400 mb-4">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-base">bed</span> 2 Beds</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-base">bathtub</span> 1 Bath</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-base">square_foot</span> 900 sqft</div>
+</div>
+</div>
+<div class="p-4 pt-0">
+<button class="w-full rounded-lg bg-primary/10 dark:bg-primary/20 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/20 dark:hover:bg-primary/30">View Details</button>
+</div>
+</div>
+<div class="group relative flex flex-col overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<img alt="Modern apartment exterior" class="h-56 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTOh-Wb_oCnDehxbEMf_j1aa9MyU8_8KpNpB7VByEwqU_1K7Ni0XB4daaKmvIhQTFdKNdvb9nQJHByj0GU47ZH1D7fs--vY7pOnPR-uWr6MtD8cO3-KO-9utZGQnlDOnt_JCEbIJGjpfkh5OK7aqr97pMM88zK_W-uDfbGnuykNjCgUcetWIx7ykOZ8qqy1jfB_7ycTx_3U0HHcb6y2Z2GqjUWak4ZZxjAl0QkfoyG2nZzggHjQBbH2YaWvIPLHQ4W4fiO6Hmrng"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4 text-white">
+<h3 class="text-lg font-semibold">4-Bedroom House</h3>
+<p class="text-sm">Douala</p>
+</div>
+<div class="absolute top-4 right-4 flex gap-2">
+<button class="h-8 w-8 rounded-full bg-white/20 text-white backdrop-blur-sm flex items-center justify-center hover:bg-white/40"><span class="material-symbols-outlined text-lg">chevron_left</span></button>
+<button class="h-8 w-8 rounded-full bg-white/20 text-white backdrop-blur-sm flex items-center justify-center hover:bg-white/40"><span class="material-symbols-outlined text-lg">chevron_right</span></button>
+</div>
+</div>
+<div class="flex-grow p-4">
+<div class="flex justify-between items-center mb-2">
+<p class="text-xl font-bold text-primary">$450,000</p>
+</div>
+<div class="grid grid-cols-3 gap-2 text-sm text-gray-600 dark:text-gray-400 mb-4">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-base">bed</span> 4 Beds</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-base">bathtub</span> 3 Baths</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-base">square_foot</span> 2,500 sqft</div>
+</div>
+</div>
+<div class="p-4 pt-0">
+<button class="w-full rounded-lg bg-primary/10 dark:bg-primary/20 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/20 dark:hover:bg-primary/30">View Details</button>
+</div>
+</div>
+<div class="group relative flex flex-col overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<img alt="Modern apartment exterior" class="h-56 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZCIZSOakwz-OPKK9wWO9W26Vl39IyfDHN8Hg-qrBuGkkSZdjxLQ8284lj_yKcJ-F2TxGvNcLELnc1OsT_YTYbRBzqVXD3cVij8iB37onyOzE6dt-fX7GdWZ_6AWv4Vx5B7B5NOqOhXmfMVMNmtoSg7k6g75epP08KPHJhb77xq2zV6QPuC6aeNQKEZpBCiaXK4RgE59z1HwTlRuuvnKeeVhtEGchgMpWLpirAf-VKsDjxbnxWQMQkHDyfG1axzor6zS7YkeRTAg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4 text-white">
+<h3 class="text-lg font-semibold">1-Bedroom Studio</h3>
+<p class="text-sm">Yaounde</p>
+</div>
+<div class="absolute top-4 right-4 flex gap-2">
+<button class="h-8 w-8 rounded-full bg-white/20 text-white backdrop-blur-sm flex items-center justify-center hover:bg-white/40"><span class="material-symbols-outlined text-lg">chevron_left</span></button>
+<button class="h-8 w-8 rounded-full bg-white/20 text-white backdrop-blur-sm flex items-center justify-center hover:bg-white/40"><span class="material-symbols-outlined text-lg">chevron_right</span></button>
+</div>
+</div>
+<div class="flex-grow p-4">
+<div class="flex justify-between items-center mb-2">
+<p class="text-xl font-bold text-primary">$120,000</p>
+</div>
+<div class="grid grid-cols-3 gap-2 text-sm text-gray-600 dark:text-gray-400 mb-4">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-base">bed</span> 1 Bed</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-base">bathtub</span> 1 Bath</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-base">square_foot</span> 600 sqft</div>
+</div>
+</div>
+<div class="p-4 pt-0">
+<button class="w-full rounded-lg bg-primary/10 dark:bg-primary/20 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/20 dark:hover:bg-primary/30">View Details</button>
+</div>
+</div>
+<div class="group relative flex flex-col overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<img alt="Modern apartment exterior" class="h-56 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbTyxF6DtqNAfLwDhXQV9O4SQrlD8pVnCJ1WtumwL5MPR35WoY94NSieXsUZRjwuqC67qzRqe0T2TiUSLsRc5Oky-iLHW8h5aPFZOB9eO4u2hoC_zeV6WYSe_WfXWu2jJ94ud_MsInUeekZPC45G3Zhy2VVtc56_G3CdOITdjYIuIMoR-mBoWDRp2UIwpudZ3NVvQM-rWqKOZKZz1ErfBrq3M0ikVVbXL7P6wndT4Hlwd3MhmpRscpU6NC7_1ffuSLdMN3vLNrhA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4 text-white">
+<h3 class="text-lg font-semibold">3-Bedroom Apartment</h3>
+<p class="text-sm">Buea</p>
+</div>
+<div class="absolute top-4 right-4 flex gap-2">
+<button class="h-8 w-8 rounded-full bg-white/20 text-white backdrop-blur-sm flex items-center justify-center hover:bg-white/40"><span class="material-symbols-outlined text-lg">chevron_left</span></button>
+<button class="h-8 w-8 rounded-full bg-white/20 text-white backdrop-blur-sm flex items-center justify-center hover:bg-white/40"><span class="material-symbols-outlined text-lg">chevron_right</span></button>
+</div>
+</div>
+<div class="flex-grow p-4">
+<div class="flex justify-between items-center mb-2">
+<p class="text-xl font-bold text-primary">$250,000</p>
+</div>
+<div class="grid grid-cols-3 gap-2 text-sm text-gray-600 dark:text-gray-400 mb-4">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-base">bed</span> 3 Beds</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-base">bathtub</span> 2 Baths</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-base">square_foot</span> 1,200 sqft</div>
+</div>
+</div>
+<div class="p-4 pt-0">
+<button class="w-full rounded-lg bg-primary/10 dark:bg-primary/20 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/20 dark:hover:bg-primary/30">View Details</button>
+</div>
+</div>
+<div class="group relative flex flex-col overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<img alt="Modern apartment exterior" class="h-56 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi8ZTLow65M0sqxuR3mORyRz_RVpiKvdBVi6c1Lf9xUnsxA-gxj-R4nzlQcbm46WlJEsFDGR_Bm0Qa8jJwY11W7g4k00wZwIQ1YweAQEGnjQjnEm3FXEWoLd_jmEiIHL379-UvpLttFaKzHz4YtTRitD7rOYQgWImh2qTWO9CIS3Z9YUU9w0rsynQxw_ElxL63nerbhSyTuzr_g31ATCCnIvkSie_l8GVKGqOGrpYWA9okIy3bi3IGpWlozm9OGBi2z6hxWUV8Zw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4 text-white">
+<h3 class="text-lg font-semibold">2-Bedroom Condo</h3>
+<p class="text-sm">Limbe</p>
+</div>
+<div class="absolute top-4 right-4 flex gap-2">
+<button class="h-8 w-8 rounded-full bg-white/20 text-white backdrop-blur-sm flex items-center justify-center hover:bg-white/40"><span class="material-symbols-outlined text-lg">chevron_left</span></button>
+<button class="h-8 w-8 rounded-full bg-white/20 text-white backdrop-blur-sm flex items-center justify-center hover:bg-white/40"><span class="material-symbols-outlined text-lg">chevron_right</span></button>
+</div>
+</div>
+<div class="flex-grow p-4">
+<div class="flex justify-between items-center mb-2">
+<p class="text-xl font-bold text-primary">$180,000</p>
+</div>
+<div class="grid grid-cols-3 gap-2 text-sm text-gray-600 dark:text-gray-400 mb-4">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-base">bed</span> 2 Beds</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-base">bathtub</span> 1 Bath</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-base">square_foot</span> 900 sqft</div>
+</div>
+</div>
+<div class="p-4 pt-0">
+<button class="w-full rounded-lg bg-primary/10 dark:bg-primary/20 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/20 dark:hover:bg-primary/30">View Details</button>
+</div>
+</div>
+</div>
+<div class="mt-12 flex justify-center">
+<nav aria-label="Pagination" class="flex items-center gap-2">
+<a class="inline-flex h-10 w-10 items-center justify-center rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700" href="#"><span class="material-symbols-outlined">chevron_left</span></a>
+<a class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-semibold text-white" href="#">1</a>
+<a class="inline-flex h-10 w-10 items-center justify-center rounded-full text-sm font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700" href="#">2</a>
+<a class="inline-flex h-10 w-10 items-center justify-center rounded-full text-sm font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700" href="#">3</a>
+<span class="text-gray-500 dark:text-gray-400">...</span>
+<a class="inline-flex h-10 w-10 items-center justify-center rounded-full text-sm font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700" href="#">8</a>
+<a class="inline-flex h-10 w-10 items-center justify-center rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700" href="#"><span class="material-symbols-outlined">chevron_right</span></a>
+</nav>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

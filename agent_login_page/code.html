@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Agent Login</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0684f9",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1923",
+                        "content-light": "#111827",
+                        "content-dark": "#f3f4f6",
+                        "subtle-light": "#6b7280",
+                        "subtle-dark": "#9ca3af",
+                        "border-light": "#e5e7eb",
+                        "border-dark": "#374151"
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex flex-col min-h-screen">
+<main class="flex-grow flex items-center justify-center p-4">
+<div class="w-full max-w-md">
+<div class="bg-background-light dark:bg-background-dark p-8 rounded-xl">
+<div class="flex flex-col items-center mb-8">
+<div class="p-2 bg-primary rounded-full mb-4">
+<svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h1 class="text-2xl font-bold text-content-light dark:text-content-dark">HomeFinder</h1>
+<h2 class="text-xl font-semibold text-content-light dark:text-content-dark mt-4">Agent Login</h2>
+</div>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-content-light dark:text-content-dark" for="agentId">Agent ID/Email</label>
+<div class="mt-1">
+<input class="appearance-none block w-full px-3 py-2 border border-border-light dark:border-border-dark rounded-lg shadow-sm placeholder-subtle-light dark:placeholder-subtle-dark focus:outline-none focus:ring-primary focus:border-primary sm:text-sm bg-background-light dark:bg-background-dark text-content-light dark:text-content-dark" id="agentId" name="agentId" placeholder="Enter your agent ID or email" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-content-light dark:text-content-dark" for="password">Password</label>
+<div class="mt-1">
+<input class="appearance-none block w-full px-3 py-2 border border-border-light dark:border-border-dark rounded-lg shadow-sm placeholder-subtle-light dark:placeholder-subtle-dark focus:outline-none focus:ring-primary focus:border-primary sm:text-sm bg-background-light dark:bg-background-dark text-content-light dark:text-content-dark" id="password" name="password" placeholder="Enter your password" type="password"/>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="text-sm">
+<a class="font-medium text-primary hover:text-primary/80" href="#">
+                                    Forgot Password?
+                                </a>
+</div>
+</div>
+<div>
+<button class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" type="submit">
+                                Agent Login
+                            </button>
+</div>
+</form>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

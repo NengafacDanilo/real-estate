@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HomeFinder - Property Submission</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Work+Sans%3Awght%40400%3B500%3B600%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#359EFF",
+            accent: "#48bb78",
+            "background-light": "#f5f7f8",
+            "background-dark": "#0f1923"
+          },
+          fontFamily: {
+            display: "Work Sans"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    .form-input,
+    .form-select,
+    .form-textarea {
+      border-color: #e2e8f0;
+      transition: all 0.2s ease-in-out;
+    }
+    .dark .form-input,
+    .dark .form-select,
+    .dark .form-textarea {
+      border-color: #4a5568;
+      background-color: #1a202c;
+    }
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      --tw-ring-color: transparent !important;
+      border-color: #359EFF !important;
+      box-shadow: 0 0 0 1px #359EFF;
+    }
+    .step-active {
+      border-color: #359EFF !important;
+      color: #359EFF !important;
+      font-weight: 600;
+    }
+    .step-active .step-circle {
+      background-color: #359EFF !important;
+      color: white;
+    }
+    .step-completed .step-circle {
+      background-color: #48bb78 !important;
+      color: white;
+    }
+    .drag-drop-area {
+      border: 2px dashed #e2e8f0;
+    }
+    .dark .drag-drop-area {
+      border-color: #4a5568;
+    }
+    .drag-drop-area:hover {
+      border-color: #359EFF;
+      background-color: #f0faff;
+    }
+    .dark .drag-drop-area:hover {
+      border-color: #359EFF;
+      background-color: #1a2938;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex flex-col min-h-screen">
+<header class="w-full bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 shadow-sm sticky top-0 z-50">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center py-4">
+<div class="flex items-center gap-3">
+<svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h1 class="text-xl font-bold text-gray-900 dark:text-white">HomeFinder</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-4 py-2 text-sm font-semibold rounded-lg border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark">
+              Save Draft
+            </button>
+<button class="px-6 py-2 text-sm font-semibold rounded-lg bg-accent text-white hover:bg-accent/90 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent dark:focus:ring-offset-background-dark">
+              Submit Listing
+            </button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto py-8 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-5xl mx-auto">
+<h1 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white text-center mb-4">List Your Property</h1>
+<p class="text-center text-gray-600 dark:text-gray-400 mb-8">Follow the steps below to get your property listed on HomeFinder.</p>
+<div class="mb-12">
+<div class="flex items-center justify-center">
+<div class="flex items-center text-sm font-medium text-gray-500 dark:text-gray-400 step-completed">
+<div class="step-circle flex items-center justify-center w-8 h-8 rounded-full border-2 border-gray-300 dark:border-gray-600">1</div>
+<span class="ml-3 hidden sm:inline">Property Details</span>
+</div>
+<div class="flex-auto border-t-2 border-gray-300 dark:border-gray-600 mx-4"></div>
+<div class="flex items-center text-sm font-medium text-gray-500 dark:text-gray-400 step-completed">
+<div class="step-circle flex items-center justify-center w-8 h-8 rounded-full border-2 border-gray-300 dark:border-gray-600">2</div>
+<span class="ml-3 hidden sm:inline">Media</span>
+</div>
+<div class="flex-auto border-t-2 border-gray-300 dark:border-gray-600 mx-4"></div>
+<div class="flex items-center text-sm font-medium text-gray-500 dark:text-gray-400 step-active">
+<div class="step-circle flex items-center justify-center w-8 h-8 rounded-full border-2 border-gray-300 dark:border-gray-600">3</div>
+<span class="ml-3 hidden sm:inline">Pricing &amp; Details</span>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-xl shadow-md">
+<form action="#" method="POST">
+<div class="hidden" id="step-1">
+<h3 class="text-2xl font-semibold mb-6 text-gray-800 dark:text-white">Property Details</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="address">Address</label>
+<input class="form-input w-full rounded-lg" id="address" name="address" placeholder="e.g., 123 Main St" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="property-type">Property Type</label>
+<select class="form-select w-full rounded-lg" id="property-type" name="property-type">
+<option>Single-Family Home</option>
+<option>Condominium</option>
+<option>Townhouse</option>
+<option>Multi-Family Home</option>
+<option>Land</option>
+</select>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="bedrooms">Bedrooms</label>
+<input class="form-input w-full rounded-lg" id="bedrooms" name="bedrooms" placeholder="e.g., 3" type="number"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="bathrooms">Bathrooms</label>
+<input class="form-input w-full rounded-lg" id="bathrooms" name="bathrooms" placeholder="e.g., 2" type="number"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="size">Size (sqft)</label>
+<input class="form-input w-full rounded-lg" id="size" name="size" placeholder="e.g., 2000" type="number"/>
+</div>
+</div>
+<div class="md:col-span-2">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="description">Property Description</label>
+<div class="mt-1">
+<div class="bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
+<div class="flex items-center justify-between px-3 py-2 border-b dark:border-gray-600">
+<div class="flex flex-wrap items-center divide-gray-200 sm:divide-x dark:divide-gray-600">
+<div class="flex items-center space-x-1 sm:pr-4">
+<button class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600" type="button"><span class="material-symbols-outlined text-base">format_bold</span></button>
+<button class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600" type="button"><span class="material-symbols-outlined text-base">format_italic</span></button>
+<button class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600" type="button"><span class="material-symbols-outlined text-base">format_list_bulleted</span></button>
+<button class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600" type="button"><span class="material-symbols-outlined text-base">format_list_numbered</span></button>
+</div>
+</div>
+</div>
+<div class="py-2 px-4 bg-white dark:bg-gray-800 rounded-b-lg">
+<textarea class="form-textarea block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" id="description" placeholder="Write a detailed description..." required="" rows="8"></textarea>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-2">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Amenities</label>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+<div class="flex items-center">
+<input class="h-4 w-4 text-primary rounded border-gray-300 focus:ring-primary" id="pool" name="amenities" type="checkbox"/>
+<label class="ml-2 block text-sm text-gray-900 dark:text-gray-300" for="pool">Swimming Pool</label>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 text-primary rounded border-gray-300 focus:ring-primary" id="garage" name="amenities" type="checkbox"/>
+<label class="ml-2 block text-sm text-gray-900 dark:text-gray-300" for="garage">Garage</label>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 text-primary rounded border-gray-300 focus:ring-primary" id="garden" name="amenities" type="checkbox"/>
+<label class="ml-2 block text-sm text-gray-900 dark:text-gray-300" for="garden">Garden</label>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 text-primary rounded border-gray-300 focus:ring-primary" id="ac" name="amenities" type="checkbox"/>
+<label class="ml-2 block text-sm text-gray-900 dark:text-gray-300" for="ac">Air Conditioning</label>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 text-primary rounded border-gray-300 focus:ring-primary" id="gym" name="amenities" type="checkbox"/>
+<label class="ml-2 block text-sm text-gray-900 dark:text-gray-300" for="gym">Gym</label>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 text-primary rounded border-gray-300 focus:ring-primary" id="balcony" name="amenities" type="checkbox"/>
+<label class="ml-2 block text-sm text-gray-900 dark:text-gray-300" for="balcony">Balcony</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden" id="step-2">
+<h3 class="text-2xl font-semibold mb-6 text-gray-800 dark:text-white">Media</h3>
+<div class="space-y-8">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Property Photos</label>
+<div class="mt-2 flex justify-center rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 px-6 pt-5 pb-6 hover:border-primary dark:hover:border-primary transition-colors duration-300">
+<div class="text-center">
+<span class="material-symbols-outlined text-6xl text-gray-400 dark:text-gray-500">
+                        photo_camera
+                      </span>
+<div class="mt-4 flex text-sm leading-6 text-gray-600 dark:text-gray-400">
+<label class="relative cursor-pointer rounded-md font-semibold text-primary focus-within:outline-none focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2 dark:focus-within:ring-offset-background-dark hover:text-primary/90" for="file-upload">
+<span>Upload a file</span>
+<input class="sr-only" id="file-upload" multiple="" name="file-upload" type="file"/>
+</label>
+<p class="pl-1">or drag and drop</p>
+</div>
+<p class="text-xs leading-5 text-gray-500 dark:text-gray-500">PNG, JPG, GIF up to 10MB</p>
+</div>
+</div>
+<div class="mt-6 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
+<div class="relative group">
+<img alt="Property photo 1" class="rounded-lg object-cover w-full h-28" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBub3XkAOEqmS9BTHsE44YQ66LLjUDFw4epRufIT-vEFKbwB-j8sk8uRZJBO6eT1K-wESjvvTSwjpddHL8kiQpdiju6MICDZ8Fpg1iko_iCycA8HnWoKU8FZsLqhgs4XdJ1jOdKH3-PtHke6kxfmWn_dh-sV1E4Ukph4h5oTIsMIZxA_rRx82aoDpwStJuHZ7Nno5yIio4N2LHG6zD9SqfSLhzvfZdrfXYuN_pwxDYmUIl3on3g75b5al03iEtD1uKhs0w4UJ-3Yg"/>
+<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center rounded-lg">
+<button class="p-1.5 bg-white/20 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-white/40">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+<div class="relative group">
+<img alt="Property photo 2" class="rounded-lg object-cover w-full h-28" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ5T-yddX9gQ08b2WUsbl8mZCCEd5EZhE5jawSprc8jFA7WdISCy8bnIHlfKdqvEcWUeZb9lUT5C7q-JqQ7oo5BSPmtGWWa06wNlMz7ADNrHXZe0gwf176AuT9wJwk01LKIsslsMF4SaR8pry2H-mw931Uzx4VgDE487ZqjPybdllMC5mOxHeLNatmBk5w4qEc2xeaHyFI5Y9pJdHA1sOspWWIqfyAabC5C8w7sJOlBCnOPNRxNFWCCJP3UqNa6eLNOV-UUQ4RYw"/>
+<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center rounded-lg">
+<button class="p-1.5 bg-white/20 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-white/40">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+<div class="relative group">
+<img alt="Property photo 3" class="rounded-lg object-cover w-full h-28" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADrNt8MsV_VTNOuLXkOM4U4ikrO07XLx3_tRfUAtICqxeSuWebFKmBw8NdEahVZsflnnddSMFwbgfMmRSE3kw4ei8RaRZJlJX0yDN782S2nrcWdf5uMgXiwEWkltTsLGvU9tCgFYBnjhB_pW4-ueUZTImCZpd4-bQGs-nKhsVx4x-QSQy1yXb7jqSuQMl1b4iVZllcNA-1FmiWmJqSC8Eju7BGWc8l_kbnCKmr2Pb2svIiNgie-v1WpNex8anJk_YnO5samUE8_w"/>
+<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center rounded-lg">
+<button class="p-1.5 bg-white/20 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-white/40">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="video-link">Video Tour Link</label>
+<div class="mt-2 flex rounded-lg shadow-sm">
+<span class="inline-flex items-center px-3 rounded-l-lg border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm dark:bg-gray-700 dark:border-gray-600 dark:text-gray-400">
+<span class="material-symbols-outlined text-base">videocam</span>
+</span>
+<input class="form-input flex-1 block w-full rounded-none rounded-r-lg" id="video-link" name="video-link" placeholder="e.g., https://www.youtube.com/watch?v=..." type="url"/>
+</div>
+<p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Provide a link to a video tour from YouTube, Vimeo, etc.</p>
+</div>
+</div>
+</div>
+<div id="step-3">
+<h3 class="text-2xl font-semibold mb-6 text-gray-800 dark:text-white">Pricing &amp; Details</h3>
+<div class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="price">Property Price</label>
+<div class="relative">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="text-gray-500 dark:text-gray-400 sm:text-sm">$</span>
+</div>
+<input class="form-input w-full rounded-lg pl-7" id="price" name="price" placeholder="500,000" type="number"/>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+<span class="text-gray-500 dark:text-gray-400 sm:text-sm" id="price-currency">USD</span>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="property-type-detailed">Property Type</label>
+<select class="form-select w-full rounded-lg" id="property-type-detailed" name="property-type-detailed">
+<option>Apartment</option>
+<option>House</option>
+<option>Condo</option>
+<option>Townhouse</option>
+<option>Villa</option>
+<option>Land</option>
+<option>Other</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="bedrooms-detailed">Bedrooms
+<div class="flex items-center mt-2">
+<button class="p-2 rounded-full border border-gray-300 dark:border-gray-600 text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700" type="button">-</button>
+<input class="form-input w-full text-center border-0 focus:ring-0" id="bedrooms-detailed" name="bedrooms-detailed" type="text" value="3"/>
+<button class="p-2 rounded-full border border-gray-300 dark:border-gray-600 text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700" type="button">+</button>
+</div>
+</label></div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="bathrooms-detailed">Bathrooms</label>
+<div class="flex items-center mt-2">
+<button class="p-2 rounded-full border border-gray-300 dark:border-gray-600 text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700" type="button">-</button>
+<input class="form-input w-full text-center border-0 focus:ring-0" id="bathrooms-detailed" name="bathrooms-detailed" type="text" value="2"/>
+<button class="p-2 rounded-full border border-gray-300 dark:border-gray-600 text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700" type="button">+</button>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="square-footage">Square Footage (sqft)</label>
+<input class="form-input w-full rounded-lg mt-2" id="square-footage" name="square-footage" placeholder="e.g. 1,800" type="number"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Additional Features</label>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+<div class="flex items-center">
+<input class="h-4 w-4 text-accent rounded border-gray-300 focus:ring-accent" id="feature-pool" name="features" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-800 dark:text-gray-300" for="feature-pool">Pool</label>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 text-accent rounded border-gray-300 focus:ring-accent" id="feature-garage" name="features" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-800 dark:text-gray-300" for="feature-garage">Garage</label>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 text-accent rounded border-gray-300 focus:ring-accent" id="feature-fireplace" name="features" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-800 dark:text-gray-300" for="feature-fireplace">Fireplace</label>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 text-accent rounded border-gray-300 focus:ring-accent" id="feature-ac" name="features" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-800 dark:text-gray-300" for="feature-ac">Air Conditioning</label>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 text-accent rounded border-gray-300 focus:ring-accent" id="feature-heating" name="features" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-800 dark:text-gray-300" for="feature-heating">Heating</label>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 text-accent rounded border-gray-300 focus:ring-accent" id="feature-balcony" name="features" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-800 dark:text-gray-300" for="feature-balcony">Balcony/Patio</label>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 text-accent rounded border-gray-300 focus:ring-accent" id="feature-hardwood" name="features" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-800 dark:text-gray-300" for="feature-hardwood">Hardwood Floors</label>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 text-accent rounded border-gray-300 focus:ring-accent" id="feature-laundry" name="features" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-800 dark:text-gray-300" for="feature-laundry">Laundry Room</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-600 flex justify-between items-center">
+<button class="px-6 py-2 text-sm font-semibold rounded-lg border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark disabled:opacity-50 disabled:cursor-not-allowed" id="back-btn" type="button">
+                Back
+              </button>
+<button class="px-6 py-2 text-sm font-semibold rounded-lg bg-primary text-white hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark" id="next-btn" type="button">
+                Next
+              </button>
+<button class="hidden px-6 py-2 text-sm font-semibold rounded-lg bg-accent text-white hover:bg-accent/90 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent dark:focus:ring-offset-background-dark" id="submit-btn" type="submit">
+                Submit Listing
+              </button>
+</div>
+</form>
+</div>
+</div>
+</main>
+</div>
+<script>
+    // Simple multi-step form logic
+    const steps = [document.getElementById('step-1'), document.getElementById('step-2'), document.getElementById('step-3')];
+    const steppers = document.querySelectorAll('.flex.items-center.text-sm.font-medium');
+    const backBtn = document.getElementById('back-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const submitBtn = document.getElementById('submit-btn');
+    // START: Logic to reflect the requested section being active
+    let currentStep = 2;
+    // END: Logic to reflect the requested section being active
+    function updateStepVisibility() {
+      steps.forEach((step, index) => {
+        step.classList.toggle('hidden', index !== currentStep);
+      });
+      steppers.forEach((stepper, index) => {
+        stepper.classList.remove('step-active', 'step-completed');
+        if (index < currentStep) {
+          stepper.classList.add('step-completed');
+        } else if (index === currentStep) {
+          stepper.classList.add('step-active');
+        }
+      });
+      backBtn.disabled = currentStep === 0;
+      if (currentStep === steps.length - 1) {
+        nextBtn.classList.add('hidden');
+        submitBtn.classList.remove('hidden');
+      } else {
+        nextBtn.classList.remove('hidden');
+        submitBtn.classList.add('hidden');
+      }
+    }
+    nextBtn.addEventListener('click', () => {
+      if (currentStep < steps.length - 1) {
+        currentStep++;
+        updateStepVisibility();
+      }
+    });
+    backBtn.addEventListener('click', () => {
+      if (currentStep > 0) {
+        currentStep--;
+        updateStepVisibility();
+      }
+    });
+    updateStepVisibility();
+  </script>
+
+</body></html>
